@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>藏区风俗文化大全</title>
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<body>
+<!-- 登录 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel"><img src="images/index/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <input type="text" placeholder="邮箱/手机/用户名" class="txt1">
+          <input type="password" placeholder="密码" class="txt2">
+          <input type="submit" value="登录" class="denglu">
+          <p><span class="forget">
+                <a href="#">忘记密码</a>
+              </span>
+              <span class="noname">
+                <a href="#" class="meizhanghao" data-toggle="modal" data-target="#myModal1" data-dismiss="modal">还没有账号？免费注册</a>
+              </span>
+          </p>
+          <div class="other">
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr1">
+            <span>其他报名方式</span>
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr2">
+          </div>
+          <input type="submit" class="btn" value="不登录，直接报名&gt;">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框——注册 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- top -->
+        <h2 class="modal-title" id="myModalLabel1"><img src="images/index/sign-up.gif" alt=""></h2>
+        <p class="telZhuce"><a href="" class="btn-primary btn-lg shoujizhuce" data-toggle="modal" data-target="#myModal2" data-dismiss="modal">用手机注册</a></p>
+      </div>
+      <div class="modal-body">
+          <input class="zhuTxt email" type="text" placeholder="请输入邮箱">
+          <input class="zhuTxt userName" type="text" placeholder="用户名，4-16个字符，字母/中文/数字">
+          <span id="false">格式错误！</span>
+          <input class="zhuTxt setPass" type="text" placeholder="设置密码">
+          <input class="zhuTxt password" type="text" placeholder="输入密码">
+          <span id="butong">密码错误！</span>
+          <input class="zhuTxt invite" type="text" placeholder="输入邀请码，可不填">
+          <div class="tongyizhuce">
+            <div class="zhuce1">
+              <span>注册视为同意  </span>《爱自驾用户使用协议》
+            </div>
+            <div class="zhuce2">
+              <a href="">
+                <input type="submit" value="注册" class="gozhuce">
+              </a>
+            </div>
+      </div>
+      <div class="other">
+              <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr1">
+              <span>其他报名方式</span>
+              <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr2">
+          </div>
+          <input type="button" class="btn" value="快速登录&gt;">
+          </div>
+    </div>
+  </div>
+</div>
+<!-- 手机注册 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"id="clear2">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- top -->
+        <h2 class="modal-title" id="myModalLabel"><img src="images/index/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <input type="text" placeholder="手机号" class="txt1 pNumber">
+          <input type="submit" value="获取验证码" class="getyanNum">
+          <input type="text" placeholder="验证码" class="txt2 yNumber">
+          <input type="submit" value="注册" class="phzhuce">
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div id="page">
+		<div id="navBig">
+			<div id="navSma">
+				<div class="logo">
+					<img src="images/index/logo.gif" alt="logo" title="自驾游">
+				</div>
+				<ul class="nav-left">
+					<li class="nav-li" id="nav-li1"><a href="#" target="_blank">风俗文化</a></li>
+          <li class="nav-li" id="nav-li2"><a href="#" target="_blank">路线查询</a></li>
+          <li class="nav-li" id="nav-li3"><a href="#" target="_blank">食宿推荐</a></li>
+          <li class="nav-li" id="nav-li4"><a href="#" target="_blank">装备大全</a></li>
+					<li class="nav-li" id="nav-li5"><a href="#" target="_blank">景区介绍</a></li>
+          <li class="nav-li" id="nav-li8"><a href="#" target="_blank">搭顺风车</a></li>
+          <li class="nav-li" id="nav-li6"><a href="#" target="_blank">你问我答</a></li>
+          <li class="nav-li" id="nav-li9"><a href="#" target="_blank">自由组团</a></li>
+          <li class="nav-li" id="nav-li7"><a href="#" target="_blank">进藏须知</a></li>
+				</ul>
+        <ul class="nav-right">
+            <li class="nav-rightli" id="qq">
+                <a href="#"><img src="../images/qq.gif" alt="qq">
+            </li></a>
+            <li class="nav-rightli" id="sina">
+                <a href="#"><img src="../images/sina.gif" alt="sina"></a>
+            </li>
+            <li class="btn nav-rightli" id="denglu" data-toggle="modal" data-target="#myModal">
+                <a href="#">登录</a>
+            </li>
+            <li class="nav-rightli" id="shuxian">
+                <img src="../images/shuxian.gif" alt="shuxian">
+            </li>
+            <li class="btn nav-rightli" data-toggle="modal" data-target="#myModal1" id="zhuce">
+                <a href="#">注册</a>
+            </li>
+        </ul>
+			</div>
+		</div>
+    
+    	
+    	<div id="footTop-big">
+    		<div id="footTop-sma">
+    			<span class="foot1">
+    				<a href="">人民交通出版社</a>
+    			</span>
+    			<span class="foot2">
+    				<a href="">爱自驾</a>
+    			</span>
+    			<span class="foot3">
+    				<a href="">联系我们</a>
+    			</span>
+    			<span class="foot4">
+    				<a href="">友情链接</a>
+    			</span>
+    			<span class="foot5">
+    				<a href="">爱自驾品牌店</a>
+    			</span>
+    		</div>
+    	</div>
+    	<div id="footBto-big">
+    		<div id="footBto-sma">
+    			<p><a href=""><span class="sp1">人民交通出版社股份有限公司</span><span class="sp2">京ICP备15018898号-1</span></a></p>
+    		</div>
+    	</div>
+	</div>
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/custom.js"></script>
+</head>
+</body>
+</html>
