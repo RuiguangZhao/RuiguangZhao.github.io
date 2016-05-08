@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body, html{
+			width: 100%;
+			height: 100%;
+			margin:0;
+			font-family:"微软雅黑";
+		}
+		h1 {
+			/*margin-top: 6px;*/
+		}
+		h5 {
+			color: #9C9494;
+			font-style: italic;
+			line-height: 30px;
+		}
+		#road{
+			width: 290px;
+			height: 100%;
+			border: 1px solid #9B9494;
+			float: left;
+			margin-left: 140px;
+			overflow: hidden;
+			padding-left: 10px;
+		}
+		.threeRoad{
+			margin-top: 30px;
+		}
+		.threeRoad a{
+			font-size: 14px;
+			color: #175308;
+			text-decoration: none;
+			font-style: italic;
+			line-height: 30px;
+		}
+		.roTitle{
+			line-height: 30px;
+		}
+		.roTitle span{
+			color: green;
+		}
+		.city span{
+			font-size: 14px;
+			color: #958B8B;
+		}
+		#road img{
+			margin-left: 60px;
+			margin-top: 15px;
+		}
+
+		#allmap{
+			height:100%;
+		    width: 900px;
+		    float: left;
+		}
+		#search-city{
+			margin-top: 5px;
+			margin-left: 25px;
+		}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8BAGvfWMqIcktfQwtBHHwNglkZ3setVj"></script>
+	<title>设置线、面可编辑</title>
+</head>
+<body>
+	<div id="road">
+		<h1>路线推荐</h1>
+		<h5>妈妈再也不用担心我会迷路！</h5>
+		<div class="road1 threeRoad">
+			<p class="roTitle">路线一：<span>京臧线</span></p>
+			<p class="city">主要城市：<span>北京——张家口——呼和浩特——银川——兰州——拉萨</span></p>
+			<a href="">沿途风光</a>
+		</div>
+		<div class="road2 threeRoad">
+			<p class="roTitle">路线二：<span>川藏线</span></p>
+			<p class="city">主要城市：<span>成都——雅安——泸定——康定——波密——林芝——拉萨</span></p>
+			<a href="">沿途风光</a>
+		</div>
+		<div class="road3 threeRoad">
+			<p class="roTitle">路线三：<span>滇藏线</span></p>
+			<p class="city">主要城市：<span>昆明——大理——丽江——香格里拉——林芝——拉萨</span></p>
+			<a href="">沿途风光</a>
+		</div>
+		<img src="../images/travel.jpg" alt="">
+		<div id="search-city">
+		   城市名: 
+		   <input id="cityName" type="text" style="width:100px; margin-right:10px;">
+		   <input type="button" value="查询" onclick="theLocation()">
+	    </div>
+	</div>
+	<div id="allmap"></div>
+	
+	
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	map.centerAndZoom(new BMap.Point(105.404, 36.915), 5);
+	map.enableScrollWheelZoom(); 
+	map.enableKeyboard();   // 允许键盘操作
+
+	// 添加各种控件
+    map.addControl(new BMap.ScaleControl());    		//比例尺控件
+    map.addControl(new BMap.OverviewMapControl());     //缩略地图控件 
+    map.addControl(new BMap.MapTypeControl());		  //地图类型控件
+
+    // 添加带有定位的导航控件
+  var navigationControl = new BMap.NavigationControl({
+    // 靠左上角位置
+    anchor: BMAP_ANCHOR_TOP_LEFT,
+    // LARGE类型,即显示完整的缩放控件
+    type: BMAP_NAVIGATION_CONTROL_LARGE,
+    // 启用显示定位
+    enableGeolocation: true
+  });
+  map.addControl(navigationControl);
+  // 添加定位控件
+  var geolocationControl = new BMap.GeolocationControl();
+  geolocationControl.addEventListener("locationSuccess", function(e){
+    // 定位成功事件
+    var address = '';
+    address += e.addressComponent.province;
+    address += e.addressComponent.city;
+    address += e.addressComponent.district;
+    address += e.addressComponent.street;
+    address += e.addressComponent.streetNumber;
+    alert("当前定位地址为：" + address);
+  });
+  geolocationControl.addEventListener("locationError",function(e){
+    // 定位失败事件
+    alert("定位失败！");
+  });
+  map.addControl(geolocationControl);
+  function theLocation(){
+		var city = document.getElementById("cityName").value;
+		if(city != ""){
+			map.centerAndZoom(city,11);      // 用城市名设置地图中心点
+		}
+	}
+
+	
+	//添加地图类型和缩略图
+	function add_control(){
+		map.addControl(mapType1);          //2D图，卫星图
+		map.addControl(mapType2);          //左上角，默认地图控件
+		map.setCurrentCity("北京");        //由于有3D图，需要设置城市
+		map.addControl(overView);          //添加默认缩略地图控件
+		map.addControl(overViewOpen);      //右下角，打开
+	}
+ 
+	var driving1 = new BMap.DrivingRoute(map, {renderOptions: {map: map, panel: "r-result", autoViewport: true}});
+	driving1.search("北京", "拉萨");
+	var driving2 = new BMap.DrivingRoute(map, {renderOptions: {map: map, panel: "r-result", autoViewport: true}});
+	driving2.search("成都", "拉萨");
+	var driving3 = new BMap.DrivingRoute(map, {renderOptions: {map: map, panel: "r-result", autoViewport: true}});
+	driving3.search("昆明", "拉萨");
+
+
+     // 地图加载完成后 500 毫秒以下面的中心的和地图等级显示
+	window.onload = function(){
+		setTimeout(function(){
+			map.centerAndZoom(new BMap.Point(105.404, 36.915), 5)
+		},500)
+	}
+		
+	
+
+	
+</script>

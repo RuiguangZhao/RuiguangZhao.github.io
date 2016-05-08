@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自由组团，结伴而行</title>
+	<link rel="stylesheet" type="text/css" href="../css/group.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+</head>
+<body>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <!-- <form action="/sign-up" method="post"> -->
+              <input type="text" placeholder="邮箱/手机/用户名" class="txt1">
+              <span id="dengerrName">尚未注册！</span>
+              <input type="password" placeholder="密码" class="txt2">
+              <span id="dengerrPass">密码错误！</span>
+              <input type="submit" value="登录" class="denglu">
+          <!-- </form> -->
+          <p><span class="forget">
+                <a href="#">忘记密码</a>
+              </span>
+              <span class="noname">
+                <a href="#" class="meizhanghao" data-toggle="modal" data-target="#myModal1" data-dismiss="modal">还没有账号？免费注册</a>
+              </span>
+          </p>
+          <div class="other">
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr1">
+            <span>其他登录方式</span>
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr2">
+          </div>
+          <div class="otherpicbox">
+            <div class="qq">
+              <img src="../images/qq1.gif" alt="" class="otherpic qq1">
+              <a href="#"><img src="../images/qq2.jpg" alt="" class="otherpic qq2"></a>
+            </div>
+            <div class="qzon">
+              <img src="../images/qzon1.gif" alt="" class="otherpic qzon1">
+              <a href="#"><img src="../images/qzon2.jpg" alt="" class="otherpic qzon2"></a>
+            </div>
+            <div class="sina">
+              <img src="../images/sina1.gif" alt="" class="otherpic sina1">
+              <a href="#"><img src="../images/sina2.jpg" alt="" class="otherpic sina2"></a>
+            </div>
+            <div class="weixin">
+              <img src="../images/weixin1.gif" alt="" class="otherpic weixin1">
+              <a href="#"><img src="../images/weixin2.jpg" alt="" class="otherpic weixin2"></a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框——注册 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- top -->
+        <h2 class="modal-title" id="myModalLabel1"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <!-- <form action="/sign-in" method="post"> -->
+              <input class="zhuTxt email" type="text" placeholder="请输入邮箱">
+              <span id="errEmail">格式错误！</span>
+              <span id="haveEmail">已被注册！</span>
+              <input class="zhuTxt userName" type="text" placeholder="用户名，4-16个字符，字母/中文/数字">
+              <span id="false">格式错误！</span>
+              <span id="haveName">已被使用！</span>
+              <input class="zhuTxt setPass" type="text" placeholder="设置密码">
+              <input class="zhuTxt password" type="text" placeholder="输入密码">
+              <span id="butong">密码错误！</span>
+              <input class="zhuTxt invite" type="text" placeholder="输入邀请码，可不填">
+              <div class="tongyizhuce">
+                <div class="zhuce1">
+                  <span>注册视为同意  </span>《可可西里用户使用协议》
+                </div>
+                <div class="zhuce2">
+                  <a href="">
+                    <input type="submit" value="注册" class="gozhuce">
+                  </a>
+                </div>
+            <!-- </form> -->
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page">
+	<div id="navBig">
+		<div id="navSma">
+      <div id="nav-top">
+        <h1><b>可可西里</b></h1>
+				<!-- <div class="logo">
+					<img src="images/index/logo.gif" alt="logo" title="自驾游">
+				</div> -->
+        <ul class="top-right">
+            <li class="btn top-rightli" data-toggle="modal" data-target="#myModal1" id="zhuce">
+                <a href="#">注册</a>
+            </li>
+            <li class="btn top-rightli" id="denglu" data-toggle="modal" data-target="#myModal">
+                <a href="#">登录</a>
+            </li>
+        </ul>
+      </div>
+      <div id="nav-bottom">
+				<ul class="nav-list">
+					<li class="nav-li" id="nav-li1"><a href="#" target="_blank">风俗<span>文化</span></a></li>
+          			<li class="nav-li" id="nav-li2"><a href="road.html" target="_blank">路线<span>查询</span></a></li>
+          			<li class="nav-li" id="nav-li3"><a href="#" target="_blank">食宿<span>推荐</span></a></li>
+          			<li class="nav-li" id="nav-li4"><a href="#" target="_blank">装备<span>大全</span></a></li>
+					<li class="nav-li" id="nav-li5"><a href="#" target="_blank">景区<span>介绍</span></a></li>
+          			<li class="nav-li" id="nav-li6"><a href="#" target="_blank">搭顺<span>风车</span></a></li>
+          			<li class="nav-li" id="nav-li8"><a href="#" target="_blank">自由<span>组团</span></a></li>
+          			<li class="nav-li" id="nav-li9"><a href="#" target="_blank">进藏<span>须知</span></a></li>
+				</ul>
+      </div>
+		</div><!-- nav-sma -->
+	</div><!-- nav-big -->
+	<div id="body-big">
+		<div id="body-sma">
+			<div>
+				<span class="hot-group">热门组团：</span>
+				<input type="button" value="发起组团" class="g-btn">
+			</div>
+			<form action="" class="form1">
+				<h3><b>组团一</b></h3>
+				<span><b>发起人：</b></span>
+				<input type="text" name="people" value="于文亮">
+				<span><b>始发地：</b></span>
+				<input type="text" name="start" value="吉林">
+				<span><b>目的地：</b></span>
+				<input type="text" name="end" value="拉萨">
+				<span><b>出行方式：</b></span>
+				<input type="text" name="way" value="火车">
+				<span><b>出发日期：</b></span>
+				<input type="text" name="day" value="2016.3.18">
+				<span><b>预计用时：</b></span>
+				<input type="text" name="time" value="5天">
+				<span><b>参团人数：</b></span>
+				<input type="text" name="number" value="3人">
+				<textarea name="question" id="text" cols="40" rows="5">我有疑问：
+				</textarea>
+				<span class="join"><b>我要报名：</b></span>
+				<input type="checkbox" name="join" class="checkbox">
+				<input type="submit" value="提交" class="submit">
+			</form>
+			<form action="" class="form2">
+				<h3><b>组团二</b></h3>
+				<span><b>发起人：</b></span>
+				<input type="text" name="people" value="曹世鹏">
+				<span><b>始发地：</b></span>
+				<input type="text" name="start" value="保定">
+				<span><b>目的地：</b></span>
+				<input type="text" name="end" value="呼和浩特">
+				<span><b>出行方式：</b></span>
+				<input type="text" name="way" value="骑行">
+				<span><b>出发日期：</b></span>
+				<input type="text" name="day" value="2016.5.1">
+				<span><b>预计用时：</b></span>
+				<input type="text" name="time" value="14天">
+				<span><b>参团人数：</b></span>
+				<input type="text" name="number" value="8人">
+				<textarea name="question" id="text" cols="40" rows="5">我有疑问：
+				</textarea>
+				<span class="join"><b>我要报名：</b></span>
+				<input type="checkbox" name="join" class="checkbox">
+				<input type="submit" value="提交" class="submit">
+			</form>
+			<form action="" class="form3">
+				<h3><b>组团三</b></h3>
+				<span><b>发起人：</b></span>
+				<input type="text" name="people" value="">
+				<span><b>始发地：</b></span>
+				<input type="text" name="start" value="">
+				<span><b>目的地：</b></span>
+				<input type="text" name="end" value="">
+				<span><b>出行方式：</b></span>
+				<input type="text" name="way" value="">
+				<span><b>出发日期：</b></span>
+				<input type="text" name="day" value="">
+				<span><b>预计用时：</b></span>
+				<input type="text" name="time" value="">
+				<span><b>参团人数：</b></span>
+				<input type="text" name="number" value="">
+				<textarea name="question" id="text" cols="40" rows="5">我有疑问：
+				</textarea>
+				<span class="join"><b>我要报名：</b></span>
+				<input type="checkbox" name="join" class="checkbox">
+				<input type="submit" value="提交" class="submit">
+			</form>
+			<form action="" class="form4">
+				<h3><b>组团四</b></h3>
+				<span><b>发起人：</b></span>
+				<input type="text" name="people" value="">
+				<span><b>始发地：</b></span>
+				<input type="text" name="start" value="">
+				<span><b>目的地：</b></span>
+				<input type="text" name="end" value="">
+				<span><b>出行方式：</b></span>
+				<input type="text" name="way" value="">
+				<span><b>出发日期：</b></span>
+				<input type="text" name="day" value="">
+				<span><b>预计用时：</b></span>
+				<input type="text" name="time" value="">
+				<span><b>参团人数：</b></span>
+				<input type="text" name="number" value="">
+				<textarea name="question" id="text" cols="40" rows="5">我有疑问：
+				</textarea>
+				<span class="join"><b>我要报名：</b></span>
+				<input type="checkbox" name="join" class="checkbox">
+				<input type="submit" value="提交" class="submit">
+			</form>
+			<form action="" class="form3">
+				<h3><b>组团五</b></h3>
+				<span><b>发起人：</b></span>
+				<input type="text" name="people" value="">
+				<span><b>始发地：</b></span>
+				<input type="text" name="start" value="">
+				<span><b>目的地：</b></span>
+				<input type="text" name="end" value="">
+				<span><b>出行方式：</b></span>
+				<input type="text" name="way" value="">
+				<span><b>出发日期：</b></span>
+				<input type="text" name="day" value="">
+				<span><b>预计用时：</b></span>
+				<input type="text" name="time" value="">
+				<span><b>参团人数：</b></span>
+				<input type="text" name="number" value="">
+				<textarea name="question" id="text" cols="40" rows="5">我有疑问：
+				</textarea>
+				<span class="join"><b>我要报名：</b></span>
+				<input type="checkbox" name="join" class="checkbox">
+				<input type="submit" value="提交" class="submit">
+			</form>
+			<form action="" class="form4">
+				<h3><b>组团六</b></h3>
+				<span><b>发起人：</b></span>
+				<input type="text" name="people" value="">
+				<span><b>始发地：</b></span>
+				<input type="text" name="start" value="">
+				<span><b>目的地：</b></span>
+				<input type="text" name="end" value="">
+				<span><b>出行方式：</b></span>
+				<input type="text" name="way" value="">
+				<span><b>出发日期：</b></span>
+				<input type="text" name="day" value="">
+				<span><b>预计用时：</b></span>
+				<input type="text" name="time" value="">
+				<span><b>参团人数：</b></span>
+				<input type="text" name="number" value="">
+				<textarea name="question" id="text" cols="40" rows="5">我有疑问：
+				</textarea>
+				<span class="join"><b>我要报名：</b></span>
+				<input type="checkbox" name="join" class="checkbox">
+				<input type="submit" value="提交" class="submit">
+			</form>
+			<div class="more"><a href=""><b>更多&gt;&gt;</b></a></div>
+		</div><!-- body-sma -->
+	</div><!-- body-big -->
+	
+
+	<div id="footTop-big">
+		<div id="footTop-sma">
+			<span class="foot1">
+        <a href="http://www.12306.cn" target="_blank">12306</a>
+      </span>
+      <span class="foot2">
+        <a href="http://www.alitrip.com" target="_blank">阿里旅行</a>
+      </span>
+      <span class="foot3">
+        <a href="http://www.ctrip.com/" target="_blank">携程旅游</a>
+      </span>
+      <span class="foot4">
+        <a href="http://www.elong.com/" target="_blank">艺龙旅行</a>
+      </span>
+      <span class="foot5">
+        <a href="http://www.qunar.com/" target="_blank">去哪儿</a>
+      </span>
+		</div>
+	</div>
+	<div id="footBto-big">
+		<div id="footBto-sma">
+			<p><a href=""><span class="sp1">&copy;可可西里——进藏驴友的草料站</span></a></p>
+		</div>
+	</div>
+</div><!-- page -->
+
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/group.js"></script>
+
+</body>
+</html>
