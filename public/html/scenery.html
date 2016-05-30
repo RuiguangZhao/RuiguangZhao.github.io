@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>沿途风光</title>
+    <link rel="stylesheet" type="text/css" href="../css/scenery.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<body>
+<!-- 登录 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-up" method="post">
+              <input type="text" placeholder="邮箱/手机/用户名" class="txt1" name="username">
+              <span id="dengerrName">尚未注册！</span>
+              <input type="password" placeholder="密码" class="txt2" name="password">
+              <span id="dengerrPass">密码错误！</span>
+              <input type="submit" value="登录" class="denglu">
+          </form>
+          <p><span class="forget">
+                <a href="#">忘记密码</a>
+              </span>
+              <span class="noname">
+                <a href="#" class="meizhanghao" data-toggle="modal" data-target="#myModal1" data-dismiss="modal">还没有账号？免费注册</a>
+              </span>
+          </p>
+          <div class="other">
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr1">
+            <span>其他登录方式</span>
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr2">
+          </div>
+          <div class="otherpicbox">
+            <div class="qq">
+              <img src="../images/qq1.gif" alt="" class="otherpic qq1">
+              <a href="#"><img src="../images/qq2.jpg" alt="" class="otherpic qq2"></a>
+            </div>
+            <div class="qzon">
+              <img src="../images/qzon1.gif" alt="" class="otherpic qzon1">
+              <a href="#"><img src="../images/qzon2.jpg" alt="" class="otherpic qzon2"></a>
+            </div>
+            <div class="sina">
+              <img src="../images/sina1.gif" alt="" class="otherpic sina1">
+              <a href="#"><img src="../images/sina2.jpg" alt="" class="otherpic sina2"></a>
+            </div>
+            <div class="weixin">
+              <img src="../images/weixin1.gif" alt="" class="otherpic weixin1">
+              <a href="#"><img src="../images/weixin2.jpg" alt="" class="otherpic weixin2"></a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框——注册 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- top -->
+        <h2 class="modal-title" id="myModalLabel1"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-in" method="post">
+              <input class="zhuTxt email" type="text" placeholder="请输入邮箱" name ='email'>
+              <span id="errEmail">格式错误！</span>
+              <span id="haveEmail">已被注册！</span>
+              <input class="zhuTxt userName" type="text" placeholder="用户名，4-16个字符，字母/中文/数字" name = "username">
+              <span id="false">格式错误！</span>
+              <span id="haveName">已被使用！</span>
+              <input class="zhuTxt setPass" type="text" placeholder="设置密码" name ='password'>
+              <input class="zhuTxt password" type="text" placeholder="输入密码">
+              <span id="butong">密码错误！</span>
+              <input class="zhuTxt invite" type="text" placeholder="输入邀请码，可不填">
+              <div class="tongyizhuce">
+                <div class="zhuce1">
+                  <span>注册视为同意  </span>《可可西里用户使用协议》
+                </div>
+                <div class="zhuce2">
+                  <a href="">
+                    <input type="submit" value="注册" class="gozhuce">
+                  </a>
+                </div>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+	<div id="page">
+		<div id="topBig">
+			<div class="topSma">
+				<ul class="top-left">
+					<li class="top-leftli" id="li1">世界那么大</li>
+					<li class="top-leftli" id="li2">趁早去看看</li>
+				</ul>
+				<ul class="top-right">
+					<li class="btn top-rightli" id="denglu" data-toggle="modal" data-target="#myModal">
+						<a href="#">登录</a>
+					</li>
+					<li class="btn top-rightli" data-toggle="modal" data-target="#myModal1" id="zhuce">
+						<a href="#">注册</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="navBig">
+			<div id="navSma">
+				<div class="logo">
+					<img src="../images/logo.jpg" alt="logo" title="美景推荐">
+				</div>
+				<ul class="nav-list">
+					<li class="nav-li" id="nav-li1"><a href="custom.html" target="_blank">风俗文化</a></li>
+                    <li class="nav-li" id="nav-li2"><a href="road.html" target="_blank">路线查询</a></li>
+                    <li class="nav-li" id="nav-li3"><a href="house.html" target="_blank">食宿推荐</a></li>
+                    <li class="nav-li" id="nav-li4"><a href="equip.html" target="_blank">装备大全</a></li>
+                    <li class="nav-li" id="nav-li5"><a href="#" target="_blank">景区介绍</a></li>
+                    <li class="nav-li" id="nav-li6"><a href="freecar.html" target="_blank">搭顺风车</a></li>
+                    <li class="nav-li" id="nav-li7"><a href="group.html" target="_blank">自由组团</a></li>
+                    <li class="nav-li" id="nav-li8"><a href="mast.html" target="_blank">进藏须知</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="picBox">
+		      <ul id="picList">
+		        <li><img src="../images/scroll1.jpg" alt="" /></li>
+		        <li><img src="../images/scroll2.jpg" alt="" /></li>
+		        <li><img src="../images/scroll3.jpg" alt="" /></li>
+		        <li><img src="../images/scroll4.jpg" alt="" /></li>
+		      </ul>
+		      <ul id="numList">
+		        <li></li>
+		        <li></li>
+		        <li></li>
+		        <li></li>
+		      </ul>
+    	</div>
+    	<div id="searchBig">
+    		<div id="searchSma">
+    			<div class="inputBox">
+    				<input type="text" class="txt" placeholder="请输入出发地">
+                    <a href=""><input type="submit" class="button" value=""></a>
+    			</div>
+    			<div class="resou">	
+                    <ul>
+                        <li class="go1">热门搜索：</li>
+                        <li class="go">北京</li>
+                        <li class="go">布达拉宫</li>
+                        <li class="go">香格里拉</li>
+                        <li class="go">丽江</li>
+                        <li class="go">都江堰</li>
+                        <li class="go">崇礼</li>
+                        <li class="go">大理</li>
+                    </ul>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="jingneiwaiBig" id="neiBig">
+    		<div class="jingneiwaiSma" id="neiSma">
+    			<div class="Title">
+	    			<h2 class="jingneiwai">
+	    				藏区
+	    			</h2>
+	    			<span class="neiwaiSpan1">
+	    				welcome
+	    			</span>
+	    			<!-- <span class="jian">
+	    				<a href="#">&gt;&gt;</a>
+	    			</span>
+	    			<span class="neiMore">
+	    				<a href="html/page4.html" target="_blank">更多</a>
+	    			</span>  -->  			
+    			</div>
+    			<div class="picBox">
+    				<div class="box box1">
+                        <a href="" name="布达拉宫"></a>
+    					<div class="img img1">
+    						<p class="touming">
+    						    布达拉宫
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <span class="qi yue">约</span>
+    						   <span class="price">200</span>
+    						   <span class="qi">元</span>
+    						   <span class="day">
+    						   	 5月~10月最佳
+    						   </span>
+    						   <span class="shijian">
+    						   	AAAAA
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+                                建议游玩时间：4~5小时
+    						</p>
+    						<p class="miaoshu">
+    							藏文化的结晶，朝圣者的圣地
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+					<div class="box box2">
+                        <a href="" name="大昭寺"></a>
+    					<div class="img img2">
+    						<p class="touming">
+    							大昭寺
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <span class="qi yue">约</span>
+    						   <span class="price">100</span>
+    						   <span class="qi">元</span>
+    						   <span class="day">
+    						   	 3月~10月最佳
+    						   </span>
+    						   <span class="shijian">
+    						   	 AAAA
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：1~2小时</p>
+    						<p class="miaoshu">
+    							千年汉藏情，不朽大昭寺
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    				<div class="box box3">
+                        <a href="" name="墨脱"></a>
+    					<div class="img img3">
+    						<p class="touming">
+    							墨脱
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <!-- <span class="qi yue">约</span> -->
+    						   <span class="price">自由观赏</span>
+    						  <!--  <span class="qi">元</span> -->
+    						   <span class="day">
+    						   	 四季皆宜
+    						   </span>
+    						   <span class="shijian">
+    						   	 非景区
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：6天</p>
+    						<p class="miaoshu nadamu">
+    							藏南之南，天外之天
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    				<div class="box box1">
+                        <a href="" name="鲁朗林海"></a>
+    					<div class="img img4">
+    						<p class="touming">
+    							鲁朗林海
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <span class="qi yue">约</span>
+    						   <span class="price">200</span>
+    						   <span class="qi">元</span>
+    						   <span class="day">
+    						   	 四季皆宜    
+    						   </span>
+    						   <span class="shijian">
+    						   	  AAAAA
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：半天</p>
+    						<p class="miaoshu">
+    							“西藏江南”，青葱林海
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    				<div class="box box2">
+                        <a href="" name="纳木错"></a>
+    					<div class="img img5">
+    						<p class="touming">
+    							纳木错
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <span class="qi yue">约</span>
+    						   <span class="price">120</span>
+    						   <span class="qi">元</span>
+    						   <span class="day">
+    						   	 6月~9月最佳
+    						   </span>
+    						   <span class="shijian">
+    						   	AAAA
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：1~2天</p>
+    						<p class="miaoshu">
+    							流淌着信仰的“天湖”圣地
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    				<div class="box box3">
+                        <a href="" name="阿里温泉湖"></a>
+    					<div class="img img6">
+    						<p class="touming">
+    							阿里温泉湖
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                              <!--  <span class="qi yue">约</span> -->
+    						   <span class="price">免费</span>
+    						   <!-- <span class="qi">元</span> -->
+    						   <span class="day">
+    						   	   四季皆宜
+    						   </span>
+    						   <span class="shijian">
+    						   	  暂无等级
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：3小时</p>
+    						<p class="miaoshu">
+    							洗净的，不只是灰尘
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    				<div class="box box1">
+                        <a href="" name="喜马拉雅山"></a>
+    					<div class="img img7">
+    						<p class="touming">
+    							喜马拉雅山
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <!-- <span class="qi yue">约</span> -->
+    						   <span class="price">自由观赏</span>
+    						   <!-- <span class="qi">元</span> -->
+    						   <span class="day">
+    						   	  10月~12月最佳
+    						   </span>
+    						   <span class="shijian">
+    						   	  非景区
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：5天</p>
+    						<p class="miaoshu">
+    							雪原之柱，世界屋脊
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    				<div class="box box2">
+                        <a href="" name="雅鲁藏布江大峡谷"></a>
+    					<div class="img img8">
+    						<p class="touming">
+    							雅鲁藏布江大峡谷
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <span class="qi yue">约</span>
+    						   <span class="price">300</span>
+    						   <span class="qi">元</span>
+    						   <span class="day">
+    						   	 5月~10月最佳
+    						   </span>
+    						   <span class="shijian">
+    						   	 AAAA
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：2~3天</p>
+    						<p class="miaoshu">
+    							浩浩荡荡的激流，如生命般奔腾不息
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    				<div class="box box3">
+                        <a href="" name="林芝"></a>
+    					<div class="img img9">
+    						<p class="touming">
+    							林芝
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <!-- <span class="qi yue">约</span> -->
+    						   <span class="price">自由观赏</span>
+    						   <!-- <span class="qi">元</span> -->
+    						   <span class="day">
+    						   	  四季皆宜
+    						   </span>
+    						   <span class="shijian">
+    						   	  非景区
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">
+    							建议游玩时间：3天</p>
+    						<p class="miaoshu">
+    							风光优美的松茸之乡
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="jingneiwaiBig" id="waiBig">
+    		<div class="jingneiwaiSma" id="waiSma">
+    			<div class="Title">
+	    			<h2 class="jingneiwai">
+	    				沿途
+	    			</h2>
+	    			<span class="neiwaiSpan1">
+	    				welcome
+	    			</span>
+	    			<!-- <span class="jian">
+	    				<a href="#">&gt;&gt;</a>
+	    			</span>
+	    			<span class="neiMore">
+	    				<a href="#">更多</a>
+	    			</span>  -->  			
+    			</div>
+    			<div class="picBox" id="waipicBox">
+	    			<div class="box box1">
+                            <a href="" name="昆明"></a>
+	    					<div class="img img10">
+	    						<p class="touming">
+	    							昆明
+	    						</p>
+	    					</div>
+	    					<div class="jiage">
+	    						<p>
+                                   <!-- <span class="qi yue">约</span> -->
+	    						   <span class="price">自由观赏</span>
+	    						   <!-- <span class="qi">元</span> -->
+	    						   <span class="day">
+	    						   	 四季皆宜
+	    						   </span>
+	    						   <span class="shijian">
+	    						   	 非景区
+	    						   </span>
+	    						</p>
+	    					</div>
+	    					<div class="threeP">
+	    						<p class="road">建议游玩时间：3天</p>
+	    						<p class="miaoshu">
+	    							四季如春，气候宜人
+	    						</p>
+	    						<p class="position">
+	    							<span class="ren"><img src="../images/ren.gif" alt="">
+	    							</span>
+	    							<span class="zhan">再远也要出发~~</span>
+	    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+	    							<span class="num1">36</span>
+	    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+	    							<span class="num2">0</span>
+	    						</p>
+	    					</div>
+	    			</div>
+	    			<div class="box box2">
+                            <a href="" name="大理"></a>
+	    					<div class="img img11">
+	    						<p class="touming">
+	    							大理
+	    						</p>
+	    					</div>
+	    					<div class="jiage">
+	    						<p>
+                                   <!-- <span class="qi yue">约</span> -->
+	    						   <span class="price">自由观赏</span>
+	    						   <!-- <span class="qi">元</span> -->
+	    						   <span class="day">
+	    						   	 四季皆宜
+	    						   </span>
+	    						   <span class="shijian">
+	    						   	  非景区
+	    						   </span>
+	    						</p>
+	    					</div>
+	    					<div class="threeP">
+	    						<p class="road">建议游玩时间：3天</p>
+	    						<p class="miaoshu">
+	    							风花雪月一古城
+	    						</p>
+	    						<p class="position">
+	    							<span class="ren"><img src="../images/ren.gif" alt="">
+	    							</span>
+	    							<span class="zhan">再远也要出发~~</span>
+	    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+	    							<span class="num1">36</span>
+	    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+	    							<span class="num2">0</span>
+	    						</p>
+	    					</div>
+	    				</div>
+		    			<div class="box box3">
+                                <a href="" name="丽江"></a>
+		    					<div class="img img12">
+		    						<p class="touming">
+		    							丽江
+		    						</p>
+		    					</div>
+		    					<div class="jiage">
+		    						<p>
+                                       <!-- <span class="qi yue">约</span> -->
+		    						   <span class="price">自由观赏</span>
+		    						   <!-- <span class="qi">元</span> -->
+		    						   <span class="day">
+		    						   	  四季皆宜
+		    						   </span>
+		    						   <span class="shijian xx">
+		    						   	  非景区
+		    						   </span>
+		    						</p>
+		    					</div>
+		    					<div class="threeP">
+		    						<p class="road">建议游玩时间：10天</p>
+		    						<p class="miaoshu">
+		    							彩云之南，我心的方向
+		    						</p>
+		    						<p class="position">
+		    							<span class="ren"><img src="../images/ren.gif" alt="">
+		    							</span>
+		    							<span class="zhan">再远也要出发~~</span>
+		    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+		    							<span class="num1">36</span>
+		    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+		    							<span class="num2">0</span>
+		    						</p>
+		    					</div>
+		    				</div>
+	    			<div class="box box1">
+                        <a href="" name="香格里拉"></a>
+    					<div class="img img13">
+    						<p class="touming">
+    							香格里拉
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <!-- <span class="qi yue">约</span> -->
+    						   <span class="price">自由观赏</span>
+    						   <!-- <span class="qi">元</span> -->
+    						   <span class="day">
+    						   	  四季皆宜
+    						   </span>
+    						   <span class="shijian">
+    						   	  非景区
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">建议游玩时间：5天</p>
+    						<p class="miaoshu">
+    							浪漫的花海，沁人的馨香
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+	    			</div>
+	    			<div class="box box2">
+                        <a href="" name="崇礼"></a>
+    					<div class="img img14">
+    						<p class="touming">
+    							崇礼滑雪
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <span class="qi yue">约</span>
+    						   <span class="price">130</span>
+    						   <span class="qi">元</span>
+    						   <span class="day">
+    						   	  11月~次年5月最佳
+    						   </span>
+    						   <span class="shijian">
+    						   	 AAAA
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">建议游玩时间：半天</p>
+    						<p class="miaoshu">
+    							国内最大滑雪场之一，冬奥会承办之地
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+	    			</div>
+	    			<div class="box box3">
+                        <a href="" name="都江堰"></a>
+    					<div class="img img15">
+    						<p class="touming">
+    							都江堰
+    						</p>
+    					</div>
+    					<div class="jiage">
+    						<p>
+                               <span class="qi yue">约</span>
+    						   <span class="price">90</span>
+    						   <span class="qi">元</span>
+    						   <span class="day">
+    						   	  4月~10月最佳
+    						   </span>
+    						   <span class="shijian xx">
+    						   	  AAAAA
+    						   </span>
+    						</p>
+    					</div>
+    					<div class="threeP">
+    						<p class="road">建议游玩时间：1天</p>
+    						<p class="miaoshu">
+    							感受千年前的水利建筑艺术
+    						</p>
+    						<p class="position">
+    							<span class="ren"><img src="../images/ren.gif" alt="">
+    							</span>
+    							<span class="zhan">再远也要出发~~</span>
+    							<span class="eye"><img src="../images/eye.gif" alt=""></span>
+    							<span class="num1">36</span>
+    							<span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+    							<span class="num2">0</span>
+    						</p>
+    					</div>
+	    			</div>
+	    		</div>
+    		</div>
+           <div id="footTop-big">
+            <div id="footTop-sma">
+                <span class="foot1">
+                    <a href="http://www.12306.cn" target="_blank">12306</a>
+                </span>
+                <span class="foot2">
+                    <a href="http://www.alitrip.com" target="_blank">阿里旅行</a>
+                </span>
+                <span class="foot3">
+                    <a href="http://www.ctrip.com/" target="_blank">携程旅游</a>
+                </span>
+                <span class="foot4">
+                    <a href="http://www.elong.com/" target="_blank">艺龙旅行</a>
+                </span>
+                <span class="foot5">
+                    <a href="http://www.qunar.com/" target="_blank">去哪儿</a>
+                </span>
+            </div>
+        </div>
+        <div id="footBto-big">
+            <div id="footBto-sma">
+                <p><a href=""><span class="sp1">&copy;可可西里——进藏驴友的草料站</span></a></p>
+            </div>
+        </div>
+	</div>
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.cycle.all.js"></script>
+<script src="../js/scenery.js"></script>
+</head>
+</body>
+</html>

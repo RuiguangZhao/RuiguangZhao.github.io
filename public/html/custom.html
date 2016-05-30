@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>藏区风俗文化大全</title>
+  <link rel="stylesheet" type="text/css" href="../css/custom.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<body>
+<!-- 登录 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-up" method="post">
+              <input type="text" placeholder="邮箱/手机/用户名" class="txt1" name="username">
+              <span id="dengerrName">尚未注册！</span>
+              <input type="password" placeholder="密码" class="txt2" name="password">
+              <span id="dengerrPass">密码错误！</span>
+              <input type="submit" value="登录" class="denglu">
+          </form>
+          <p><span class="forget">
+                <a href="#">忘记密码</a>
+              </span>
+              <span class="noname">
+                <a href="#" class="meizhanghao" data-toggle="modal" data-target="#myModal1" data-dismiss="modal">还没有账号？免费注册</a>
+              </span>
+          </p>
+          <div class="other">
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr1">
+            <span>其他登录方式</span>
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr2">
+          </div>
+          <div class="otherpicbox">
+            <div class="qq">
+              <img src="../images/qq1.gif" alt="" class="otherpic qq1">
+              <a href="#"><img src="../images/qq2.jpg" alt="" class="otherpic qq2"></a>
+            </div>
+            <div class="qzon">
+              <img src="../images/qzon1.gif" alt="" class="otherpic qzon1">
+              <a href="#"><img src="../images/qzon2.jpg" alt="" class="otherpic qzon2"></a>
+            </div>
+            <div class="sina">
+              <img src="../images/sina1.gif" alt="" class="otherpic sina1">
+              <a href="#"><img src="../images/sina2.jpg" alt="" class="otherpic sina2"></a>
+            </div>
+            <div class="weixin">
+              <img src="../images/weixin1.gif" alt="" class="otherpic weixin1">
+              <a href="#"><img src="../images/weixin2.jpg" alt="" class="otherpic weixin2"></a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框——注册 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- top -->
+        <h2 class="modal-title" id="myModalLabel1"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-in" method="post">
+              <input class="zhuTxt email" type="text" placeholder="请输入邮箱" name ='email'>
+              <span id="errEmail">格式错误！</span>
+              <span id="haveEmail">已被注册！</span>
+              <input class="zhuTxt userName" type="text" placeholder="用户名，4-16个字符，字母/中文/数字" name = "username">
+              <span id="false">格式错误！</span>
+              <span id="haveName">已被使用！</span>
+              <input class="zhuTxt setPass" type="text" placeholder="设置密码" name ='password'>
+              <input class="zhuTxt password" type="text" placeholder="输入密码">
+              <span id="butong">密码错误！</span>
+              <input class="zhuTxt invite" type="text" placeholder="输入邀请码，可不填">
+              <div class="tongyizhuce">
+                <div class="zhuce1">
+                  <span>注册视为同意  </span>《可可西里用户使用协议》
+                </div>
+                <div class="zhuce2">
+                  <a href="">
+                    <input type="submit" value="注册" class="gozhuce">
+                  </a>
+                </div>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page">
+	<div id="navBig">
+		<div id="navSma">
+      <div id="nav-top">
+        <h1><b>可可西里</b></h1>
+        <ul class="top-right">
+            <li class="btn top-rightli" data-toggle="modal" data-target="#myModal1" id="zhuce">
+                <a href="#">注册</a>
+            </li>
+            <li class="btn top-rightli" id="denglu" data-toggle="modal" data-target="#myModal">
+                <a href="#">登录</a>
+            </li>
+        </ul>
+      </div>
+      <div id="nav-bottom">
+				<ul class="nav-list">
+					<li class="nav-li" id="nav-li1"><a href="#" target="_blank">风俗<span>文化</span></a></li>
+          <li class="nav-li" id="nav-li2"><a href="road.html" target="_blank">路线<span>查询</span></a></li>
+          <li class="nav-li" id="nav-li3"><a href="house.html" target="_blank">食宿<span>推荐</span></a></li>
+          <li class="nav-li" id="nav-li4"><a href="equip.html" target="_blank">装备<span>大全</span></a></li>
+					<li class="nav-li" id="nav-li5"><a href="scenery.html" target="_blank">景区<span>介绍</span></a></li>
+          <li class="nav-li" id="nav-li6"><a href="freecar.html" target="_blank">搭顺<span>风车</span></a></li>
+          <li class="nav-li" id="nav-li8"><a href="group.html" target="_blank">自由<span>组团</span></a></li>
+          <li class="nav-li" id="nav-li9"><a href="mast.html" target="_blank">进藏<span>须知</span></a></li>
+				</ul>
+      </div>
+		</div><!-- nav-sma -->
+	</div><!-- nav-big -->
+  <div id="body-big">
+    <div id="body-sma">
+       <div class="body-left">
+           <ul>
+              <li class="left1">
+                 <img src="../images/laugh.gif" alt="">
+              </li>
+              <li class="left2">
+                  美食
+                 <span></span>
+              </li>
+              <li class="left3">
+                 宗教
+                 <span></span>
+              </li>
+              <li class="left4">
+                  服饰
+                 <span></span>
+              </li>
+              <li class="left5">
+                 建筑
+                 <span></span>
+              </li>
+              <li class="left6">
+                 节日
+                 <span></span>
+              </li>
+              <li class="left7">
+                 忌讳
+                 <span></span>
+              </li>
+              <li class="left8">
+                 <huan1>常用<huan2>藏语</huan2></huan1>
+                 <span></span>
+              </li>
+           </ul>
+       </div>
+       <div class="body-right">
+          <div class="once">
+              <div class="dix">
+                    美食
+                    <img src="../images/chan.gif" alt="">
+              </div>
+              <div class="foodBox">
+                  <div class="box box1">
+                      <div class="img img1">
+                        <p class="touming">
+                        糍粑
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>糌粑，藏语，即用青稞炒熟磨成的粉面。食用方便，不仅可以用茶水拌合食用，而且在不宜生火的情况下可以拌雪食服或冷水冲服。所以藏族同胞常称糌粑是“百食不厌”的食物。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box1 -->
+                  <div class="box box2">
+                      <div class="img img2">
+                        <p class="touming">
+                        糍粑肉粥
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>糌粑除了可以做成糌粑团之外，也可以做成香浓的“糌粑肉粥”。如果你不喜欢糌粑团黏黏的感觉，那么香喷喷的美味糌粑粥就会更加适合你！现在拉萨许多藏餐厅都可以吃到这一美食。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box2 -->
+                  <div class="box box3">
+                      <div class="img img3">
+                        <p class="touming">
+                          烤藏香猪
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>藏香猪又名“人参猪”,是西藏特有的一种瘦肉型猪，生长在海拔3000米至4000米的山间密林中，吃野外植物，是我国唯一的放牧型猪种。因其肉质营养丰富，被称为“高原之珍”。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box3 -->
+                  <div class="box box1">
+                      <div class="img img4">
+                        <p class="touming">
+                          朋必
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>“朋必”其实是一种豌豆粉做成的小吃。在西藏，人们一提到“朋必”，就会想到日喀则，可以说“朋必”是日喀则小吃的象征。刚刚买来的“朋必”新鲜热乎，浇上鲜磨的辣椒汁，吃一口满嘴香气，回味无穷。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box4 -->
+                  <div class="box box2">
+                      <div class="img img5">
+                        <p class="touming">
+                          青稞酒
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>青稞酒主要是藏族、土族等民族的民间传统酒精饮料，流行于西藏、青海、四川及云南等地藏族、土族聚居区。青稞酒，藏语叫做“羌”，是用西藏本地出产的一种主要粮食——青稞制成的。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box5 -->
+                  <div class="box box3">
+                      <div class="img img6">
+                        <p class="touming">
+                          土豆包子
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>在西藏品尝一下地道的西藏土豆是必须的，因为高原日照时间长，昼夜温差大，所以土豆淀粉含量高，吃起来特别香甜。而土豆包子就是在土豆泥里面包着牛肉末，外面稍微炸了下，口感酥软，味道棒极了。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box6 -->
+                  <div class="box box1">                     
+                    <div class="img img7">
+                        <p class="touming">
+                          酸奶
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>到了拉萨又怎能错过牦牛酸奶呢？拉萨的牦牛酸奶，看起来有点像豆腐花。不过吃起来比豆腐花刺激多了。牦牛酸奶的味道很原始，一个字：酸！但是加上蜂蜜，或者撒上白糖，舌尖上的感觉就会变得非常有趣。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box7 -->
+                  <div class="box box2">
+                      <div class="img img8">
+                        <p class="touming">
+                          松茸高汤
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>松茸、灵芝、冬虫夏草、羊肚菌被称为“中国四大名菌”。西藏林芝是松茸的主要产地之一，去林芝没吃过松茸等于白来一趟。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box8 -->
+                  <div class="box box3">
+                      <div class="img img9">
+                        <p class="touming">
+                          酥油茶
+                        </p>
+                      </div>
+                      <div class="miaoshu">
+                          <span></span>酥油茶是藏族同胞每日必备的饮品。是西藏高原生活的必需。寒冷的时候可以驱寒；吃肉的时候可以去腻；饥饿的时候可以充饥；困乏的时候可以解乏；瞌睡的时候，还可以清醒头脑。
+                      </div>
+                      <div class="threep">
+                        <p class="position">
+                          <span class="sign"><img src="../images/signsma.jpg" alt="">
+                          </span>
+                          <span class="evaluate">看百变不如尝一口~</span>
+                          <span class="eye"><img src="../images/eye.gif" alt=""></span>
+                          <span class="num1">666</span>
+                          <span class="zan"><img src="../images/zan.gif" alt="" class="dianzan"><img src="../images/zan2.gif" alt="" class="xiaozan"></span>
+                          <span class="num2">0</span>
+                        </p>
+                      </div>
+                  </div><!-- box9 -->
+                  <div class="more"><a href="morefood.html" target="_blank">更多&gt;&gt;</a></div>
+              </div><!-- foodBox -->
+          </div><!-- 饮食 -->
+          <div class="secend">
+             <div class="dix">
+                宗教
+                <img src="../images/fo.jpg" alt="">
+             </div>
+             <div class="religion">
+                <div class="relimgBox">
+                  <img src="../images/religion1.jpg" alt="" class="img1">
+                  <img src="../images/religion2.jpg" alt="" class="img2">
+                </div>
+                <p class="relip1">1、主要宗教信仰</p>
+                <p class="relip2">
+                  <span></span>在西藏自治区全部人口中，多数人信仰藏传佛教；信奉伊斯兰教的约有2000人，另有约600人信奉天主教。<br><span></span>藏传佛教是中国佛教的一支。公元7世纪，佛教先后从中国的中原地区和尼泊尔传入当时的吐蕃，先是在王公贵族中间流行，后来逐渐推广到民间。其传播的过程分为"前宏期"(公元7至9世纪，相当于吐蕃时期)和"后宏期"(公元10至20世纪中叶)。在"后宏期"漫长的过程中，不断有印度和克什米尔地区的佛教高僧前往青藏高原传法，同时也吸收和融汇了西藏固有的原始宗教--苯教，形成了属于大乘佛教的藏语系佛教--藏传佛教。<br><span></span>藏传佛教是藏族人民的主要信仰，也是藏族地区占主导地位的宗教。藏传佛教，有它自己的特点。如活佛转世制度，就为藏传佛教所独有。在漫长的发展过程中，还形成了许多教派，主要有：宁玛派(俗称红教)、萨迦派(俗称花教)、噶举派(俗称白教)、格鲁派(俗称黄教)等。其中以15世纪初宗喀巴对宗教进行改革后创立的格鲁派影响最大。该派后来形成达赖、班禅两大活佛系统。
+                </p><!-- relip2 -->
+                <p class="relip1">2、佛教宗教理念</p>
+                <p class="relip2">
+                  <span></span>藏族人的价值观念即就是藏传佛教的信念，或者说佛教学说是藏族价值观的核心和基础，尤其对一些老年人和出家的僧人来说，更是如此。<br><span></span>(1)相信生命轮回。佛教将一个世界分为“三界六道”，三界即欲界、色界、无色界，而有六种生灵在此三界轮回，即天、非天、人、畜生、饿鬼、地狱。佛教认为“三界六道”中的各个生灵，都有各自的寿限，寿尽而又传入其他的处所，如此在六道之中不断轮回，没有尽头。<br><span></span>(2)相信因果业报。因果业报也是佛教的重要观念之一，并据此来解释“轮回”。业即人的行为或作为，心理活动名为意业，语言行为名为口业，身体活动名为身业。六道轮回是现象，而决定轮回是因业力存在，是众生所受果报的前因与生死流转的动力，而业往往是由无明即虚妄颠倒的意识决定的。佛教认为“当一个人的生命告终时，其一生动作和行为的总和会作为一个整体产生效果，且决定转世的生存者的性格。这就是众生所作的善业和恶业都会引起相应的果报。”
+                </p>
+                <p class="relip1">3、大型宗教活动——法会</p>
+                <p class="relip2">
+                  <span></span>法会是藏传佛教最大型的活动，每个寺院每年的次数不等。其中以正月的法会最为隆
+                  重。法会期间，有全体僧人大诵经、放生节、晒佛节、法舞会、酥油花灯会、转香巴等活动。期间，
+                  会有大量的藏民及各地游客聚集到一起，场面宏大，神圣的宗教气息十分浓重。
+                </p>
+             </div>
+          </div><!-- 宗教 -->
+          <div class="third">
+            <div class="dix">
+                服饰
+                <img src="../images/yifu.jpg" alt="">
+            </div>
+            <div class="religion">
+                <div class="relimgBox">
+                  <img src="../images/clothes1.jpg" alt="" class="img1">
+                  <img src="../images/clothes2.jpg" alt="" class="img2">
+                </div>
+                <p class="relip2">
+                  <br><span></span>藏族服饰的形制与质地较大程度地取决于藏族人民所处生态环境和在此基础上形成的生产、生活方式，类型丰富多彩，差异颇多，不胜枚举，有些地区，县与县、乡与乡之间都有较大区别。已发现的服饰类型已有200多种，居中国少数民族之首。
+                </p>
+                <p class="relip1">1、男装</p>
+                <p class="relip2">
+                  <span></span>藏族男性服饰分勒规（劳动服饰）、赘规（礼服）、扎规（武士服）三种。<br>(1)勒规<br><span></span>随着一年四季气候的变化，勒规也随之变化，春夏季上身普遍穿棉布或白茧绸镶锦缎齐腰短衬衫，左襟大，右襟小，再穿棉、毛料缝制的圆领宽袖长袍，藏语叫楚巴，一般用加差朶拉（七彩大花带子，用红、绿、青、紫等七色条纹装饰毛料长带，长约2米，宽约20厘米）将楚巴围系在腰间，两袖交叉经前腹围系在腰后，长跑下垂的部分边沿齐于膝盖，腰部形成一个囊带，用来装随身携带的物品。裤子腰围、开挡和裤脚都很宽广，脚穿短统藏鞋，头戴毡礼帽。秋冬季衣裤均为牛羊皮革制品，或用人造裁绒逢制的，楚巴亦为毛料或羊皮，头戴有护耳的皮帽，脚穿长统皮鞋或皮底绒帮的自制藏鞋。<br>(2)赘规<br><span></span>赘规为节庆盛装和礼仪服饰，选料昂贵，做工精致，是藏族服饰的精品。男性赘规上衣内外衫。内衫，藏语称囊规或对搪，多选用丝绸和萤绸布料，颜色普遍为白色、紫色、浅黄色，对襟高领，襟边和领口均用金边或银边镶嵌，也有选各种颜色纹花的绸缎作布料的，内衫均为齐腕长袖；外衫，藏语称交规或崩冬，选印有圆寿、妙莲及其他花卉图案的锦缎为料，样式与内衫相同，只是无袖。楚巴领子、袖口、下摆或以水獭皮，或以豹皮，或以虎皮作装饰镶边，镶边宽度尺许，最窄也有五寸，有的还要在镶边上用白皮毛拼成“ （藏语称庸仲仁姆，象征坚固不摧、永恒常在）的图案，沿镶边内用窄于镶边的传统花色锦缎压边，再用金银扁线镶饰，有的镶三层边，最底层为水獭皮、水獭皮上面是貂皮，最上面是虎皮，几乎楚巴的整个下摆都是被镶边覆盖。裤子君为白萤绸缝制，脚穿皮底绒帮的藏式长统鞋子。男性的首饰主要有嘎乌，斜插腰刀，楚巴后摆做好漂亮的波状尾褶，佩挂嵌龙银刀，足蹬藏靴时，一幅康巴男儿的英俊形象和剽悍气质便会令人为之倾倒。<br>(3)扎规<br><span></span>头戴狐皮帽，身穿貂皮镶边的氆氇或毛呢楚巴，腰插长刀，身佩挂护身符和长短枪，倍显武士英姿勃发的阳刚之美。
+                </p><!-- relip2 -->
+                <p class="relip1">2、女装</p>
+                <p class="relip2">
+                  <span></span>藏族女性的平时着装一般是：头戴帽顶有红绿色绒饰的尖顶小帽，下穿黑红色相间的十字花纹毛裙，着邦垫。上衣是齐腰间的小袖短衣，质地有毛、缎、布等。披方形缀绒披肩，手带银镶珊瑚戒指，左手戴银钏，右手戴宽二寸的砗磲圈。耳环多是金银镶绿松石质地，耳环上有钩，以上连珍珠珊瑚串挂在发上，下接珍珠珊瑚串垂于两肩。另外，无论贫富，都要戴两串念珠，富者戴大蜜蜡珠，胸前除挂银镶珠石胸饰外，必戴佛盒，富者还头戴"巴珠"，价值千金。
+                </p>
+             </div>
+          </div><!-- 服饰 -->
+          <div class="fourth">
+              <div class="dix">
+                 建筑
+                 <img src="../images/smatent.gif" alt="">
+              </div>
+              <div class="house">
+                <img src="../images/tent.jpg" alt="">
+                <img src="../images/house.jpg" alt="">
+                <img src="../images/temple.jpg" alt="">
+                <p class="relip1">1、帐篷(游牧区居多)</p>
+                <p class="relip2">
+                  <span></span>帐篷是西藏牧民家庭不可缺少的生活用品，是他们的栖息之所。历史上西藏牧民过着游牧生活。由于不断地迁徙，居无定所，为了御风避寒，他们创造出帐篷这种能够方便携带的住所，他们走到哪里，便将帐篷带到哪里，帐篷就是他们的家。虽然现在许多牧民开始了定居生活，修起了固定的房屋，但帐篷仍然是不可缺少的生活用品。即使在青草茂盛的季节，也得不断迁徒，因为一个地方的草是有限的，草的循环生长也需要一定的时间。只有在牛羊们只能吃干草的秋冬季节，牧民们才会住在自己固定的房屋。<br><span></span>制作帐篷的材料一般都出自牧民们所养的牛、羊。牦牛毛编成的绳用以支撑帐篷；牦牛角是帐篷桩，用以固定帐篷，也有用羚羊角或木桩来固定的；牛、羊毛用以织帐篷料。帐篷料一般有七八寸宽，长短不定，由所织帐篷的高低来决定，最后将帐篷料缝在一起。
+                </p>
+                <p class="relip1">2、碉房(农业区居多)</p>
+                <p class="relip2">
+                  <span></span>碉房一般有三到四层。底层养牲口和堆放饲料、杂物；二层布置卧室、厨房等；三层设有经堂。由于藏族信仰藏传佛教，诵经拜佛的经堂占有重要位置，神位上方不能住人或堆放杂物，所以都设在房屋的顶层。为了扩大室内空间，二层常挑出墙外，轻巧的挑楼与厚重的石砌墙体形成鲜明的对比，建筑外形因此富于变化。藏族民居色彩朴素协调，基本采用材料的本色：泥土的土黄色，石块的米黄、青色、暗红色，木料部分则涂上暗红，与明亮色调的墙面屋顶形成对比。粗石垒造的墙面上有成排的上大下小的梯形窗洞，窗洞上带有彩色的出檐。在高原上的蓝天白云、雪山冰川的映衬下，座座碉房造型严整而色彩富丽，风格粗犷而凝重。
+                </p>
+                <p class="relip1">3、寺院</p>
+                <p class="relip2">
+                  <span></span>西藏寺院建筑大体分为平川式建筑和依山式建筑两大类，是僧侣们的主要住所。<br><span></span>藏传佛教寺院建筑艺术，在西藏古代建筑艺术中，最富有民族和时代特色，多依山而建、规模宏大，气势浑厚，工艺精致，金碧辉煌，蔚为壮观。从佛教寺院形成之初，到藏传佛教寺院建筑艺术主体风格的形成，其间大体经历了寺庙、寺院、宫殿与寺院建筑融合的三个发展阶段。
+                </p>
+              </div>    
+          </div><!-- 建筑 -->
+          <div class="fifth">
+              <div class="dix">
+                 西藏六大传统节日
+                 <img src="../images/denglong.gif" alt="">
+              </div>
+              <div>
+                <div class="festival festival1">
+                   <p class="relip1">1、藏历年</p>
+                   <p class="relip2">
+                    <span></span>藏历正月初一是藏族的重要节日，虽然藏历年属于藏民族传统节日，与佛教没有什么关系，但还是要先介绍这个节日，因为藏历年同汉族的春节相同，藏族人民非常重视它，而越是重视的节日，越是要请佛祖参与，与佛同乐、共享，以祈求佛祖保佑自己和家人一年中能平安、幸福。所以，人们在欢度藏历年之时，有些行为还是与佛教有十分密切的关系。藏语称“洛萨”即新年，在藏区，从头年的月初，人们就开始准备年货，吃的、穿的、用的、玩的等，一应俱全。人们培育青苗，以便在大年初一供奉在神龛前，这样做的目的是希望神能保佑在新的一年里风调雨顺，五谷丰登。月中旬，每家每户开始准备酥油、白面、大米、牛肉、羊肉等。并用酥油和面炸出许多形状各异的食品，用来供奉佛祖，还可以招待来宾。每个家庭还准备一个叫“竹素琪玛”的五彩花斗，这是一个特制的木盒，内盛糌粑，上插有麦穗、人参果、酥油花和新年花等；另备一个熟羊头或用掺有染料的酥油和上糌粑塑成的羊头，摆放在供桌上，表示六畜兴旺，人们生活富裕。除夕的前两天家居内外要彻底清扫，贴年画。日晚饭前，在灶房墙上装饰以“八吉祥”图徽。在门用白石灰粉画上象征永恒吉祥的“卐”表示人寿粮丰，岁岁太平。晚上全家人吃团圆饭，饭食为面团吐巴，吐巴里面包有石子、辣椒、木炭、羊毛等各种东西，若谁吃到包有石子的面团，表明此人心肠硬；木炭表明心肠黑；辣椒表明口齿伶俐、尖酸刻薄；羊毛表明心肠软。无论谁吃到什么都必须立刻吐出，让其他人监督验证，此举往往引起家人哄堂大笑，为除夕夜增添了快乐的气氛。饭后在神龛上挂上洁白的哈达，神龛前摆放供品和净水。大年初一，人们早早起床，穿上新衣，先祭拜神灵，然后手捧“竹素琪玛”和青稞酒，走门串户，互相拜年，人们往往说一些吉祥的祝词。返回家后要喝头天做好的热青稞酒，吃麦片吐巴和用酥油炸的人参果。年初二，亲友开始互相拜年。从藏历初一到初五，在布达拉宫举行庆贺仪式，初二这天还有杂技表演。
+                   </p>
+                </div>
+                <div class="festival festival2">
+                   <p class="relip1">2、祈祷节</p>
+                   <p class="relip2">
+                    <span></span>祈祷节是安多藏族地区和四川阿坝藏族地区最为隆重的大型宗教活动，藏语叫“莫朗切波”。四川阿坝藏族地区的祈祷节，主要有两类。一是藏传佛教的祈祷节；一是藏族原有的宗教本教的祈祷节，每年举行两次。在阿坝藏区，有许多本教寺庙和信徒，至今还保留着原始宗教的祭祀活动，每年也有极为隆重的两次祈祷节，一次是农历月日至日。据说，这次祈祷节是为了纪念在安多地区隆魔建寺的阿尼雄帕大师而举行的，他是本教的始祖登巴辛侥的弟子。在农历正月至日要举行另一次祈祷节，在这次祈祷节上，全寺僧人在活佛的主持下祈祷去灾灭祸、五谷丰收、六畜兴旺。从日至日，在经堂高诵经文、祈祷。日，是祈祷节的高潮，这天，如阿坝藏族自治州的松潘本教寺院尕米寺，前来朝觐的有来自若尔盖、红原草原、南坪等地的香客以及本地人，多达万余人。前来参加盛会的人要在日或日，去尕米寺后的圣山即小西天转一圈。日一早，寺里的僧侣喇嘛们，披上新袈裟，由乐队吹响大小铜号。随后，全寺僧人聚集在经堂诵经，并由活佛安排这一天各人的责任。上午时，僧人们向来朝觐的各地来客和观众表演丰富多彩的“跳神”节目。有些节目由至人组成，有些由十几个人组成，跳神内容都是根据本教经典故事改编而成。跳神仪式，一般从日至日持续两天，最后一天，当太阳刚刚升起，由寺里最有名望和精通历算的高僧，向人们进行新年伊始前的劝告和警告仪式。在这个仪式上，全体僧人、活佛要在寺前的大院里，站立一圈。各地信徒和外来的观众，要站在僧人们的圈外。圈内，一位头戴面具的牧人，手拿鞭子，赶着木架上的牛（塑像），木架由两位僧人边推边走。牧人比划着各种动作。在他旁边，一位僧人根据藏历阴阳五行的变化及藏历推算，得出在新的一年里，人们需要注意的各种事项。
+                   </p>
+                </div>
+                <div class="festival festival3">
+                   <p class="relip1">3、酥油灯节</p>
+                   <p class="relip2">
+                    <span></span>藏历正月15日，是酥油灯节，藏语叫“坚俄曲巴”，该节日藏历正月始于明永乐年（年）。这一节日与传召大会有着紧密的联系，也可以说它是传召大会的一部分，以后遂成为一个相对独立的节日。藏传佛教格鲁派祖师宗喀巴于藏历正月日，在拉萨举行传召法会，同时陈列各种供品，隆重纪念佛祖释迦牟尼神变降伏妖魔而创设的祈祷大会。藏历正月这天是最热闹的一天，是日，藏族群众到附近寺院朝佛转经、瞌长头。夜晚举行酥油灯花会，拉萨街头人山人海，八角街四周等地搭起各种花架，有的高达米，花架上放置各种用各色酥油捏制出的人物、宗教建筑、花木、鸟兽等造型。花架中还摆上许多酥油灯，在夜色中，满街无数酥油灯一齐燃亮，在各种美丽造型，色泽鲜艳的酥油花的映衬下，呈现出一派绚丽、辉煌的动人景观。另外，一些地方也有木偶表演。正月至日，还要举行赛马射箭比赛和跳神驱鬼仪式。
+                   </p>
+                </div>
+                <div class="festival festival4">
+                   <p class="relip1">4、雪顿节</p>
+                   <p class="relip2">
+                    <span></span>意为“吃酸奶的节日”，世纪以前“，雪顿”纯属宗教活动。按当时的法规戒律，每年藏历月日至月日为忌期，此时正是各种生灵最活跃的季节，黄教大小寺院的喇嘛，不准外出活动，以免无意中踩死昆虫，违反戒律。至月日，天气转凉，进入秋季，昆虫等各种生灵逐渐蛰伏起来，僧人外出伤害生灵的可能减少，故此，禁令解除。僧人纷纷走出寺院，百姓们在山下准备酸奶布施，此为“雪顿”的来历。世纪中叶，加入了演出藏戏的内容，娱乐活动以哲蚌寺为中心，故又称为“哲蚌雪顿”，雪顿节从此形成。五世达赖罗桑嘉措从哲蚌寺移至布达拉宫后，每年藏历月日，首先在哲蚌寺举行藏戏会演，次日再去布达拉宫做专场演出。直到世纪初，罗布林卡建成并成为*喇嘛的夏宫，雪顿节的活动才移至罗布林卡，从此形成一整套固定的节日仪式。历史上，每年藏历月日，由拉萨、日喀则、琼洁、雅砻、堆龙德庆、尼木等地的藏戏团，六个“扎西雪巴（”藏戏的一种）戏班子，一个牦牛舞班子和一个鼓队在罗布林卡联合演出。届时，噶厦政府机关放假，全体僧俗官员在罗布林卡集中，陪*喇嘛看藏戏。此间，也允许百姓入园观戏。由于雪顿节以藏戏会演为主，故又称为“藏戏节”。当今的雪顿节，更是热闹非常，这一天，家住拉萨的藏族群众几乎全部涌到罗布林卡，来得早的人家还搭起漂亮的帐篷和帷帐，雪顿节这天，整个罗布林卡内，一排排帐篷整齐相接，连成一大片。帐篷内摆上从家里带来的点心、糌粑、风十牛肉、乳制品、糖果、酥油茶、甜茶、青稞酒等，节日期间，亲朋好友在帐篷里围坐在一起，开怀畅饮，逗趣谈笑，气氛十分热烈。雪顿节一般要持续至日。
+                   </p>
+                </div>
+                <div class="festival festival5">
+                   <p class="relip1">5、望果节</p>
+                   <p class="relip2">
+                    <span></span>藏历月是丰收节，藏语叫“曲果”或“望果”，意为“巡游田地”。这个节日有点特别，它不固定在哪一天，一般是在农作物至天不等。迄成熟之际进行，属农区喜庆丰收的节日，节期多年的历史，最早始于雅鲁藏布江中下游河谷地带，今已有最初的望果活动是一种祭祀神灵以祈求丰收的仪式。据《本教历算法》等文献记载，公元世纪末，雅隆一带已经开始兴修水利，耕地播种，农业比较发达，为了确保丰收，当时的藏王布德贡杰请求本教教主帮助。教主根据本教教义，以一村为单位，由本教巫师作法，村民绕本村土地转圈，祈求天保丰收，这是最初的“望果”。随着佛教的发展和不断渗透“，望果”活动不断更新。世纪后期，藏传佛教宁玛派兴盛“，望果”活动遂受宁玛派影响，必须念咒语以祈佑丰收。到了世纪，格鲁派发展起来并逐渐居于统治地位“，望果”活动又增添了新内容，人们在巡游田地时高举佛像并背诵佛教经文，求佛保佑风调雨顺，人畜兴旺，粮食丰收。从此“，望果”活动成为一个庆丰收的节日，并逐渐增加一些诸如赛马、射箭、歌舞、藏戏、摔交和抱石等娱乐活动。除农区之外，有些牧区也举行类似的庆祝活动。
+                   </p>
+                </div>
+                <div class="festival festival6">
+                   <p class="relip1">6、吉祥天母节</p>
+                   <p class="relip2">
+                    <span></span>藏历月由木如寺全体僧人向拉萨大昭寺的护法王尊吉祥天母举行隆重的例行年祭。藏语称“白拉日卓”。木如寺僧众日晚迎请天母像至释迦牟尼佛殿，与释迦牟尼佛对坐。日一早，僧众用头顶着天母像来到八廓街，众多善男信女向天母像敬献哈达，在举行一系列的降神活动后，重返大昭寺，天母迎坐在原来的宝座上。妇女们对这个节日特别感兴趣，称其为“仙女节”，她们在这一天要刻意打扮，并到天母像前焚香许愿。吉祥佛母是藏传佛教中八大佛母之一，藏传佛教认为，吉祥天母在每年的藏历正月初一骑着太阳周游全世界，这一天太阳光在她肚子里。据传吉祥天母能给人以智慧和幸福，因此深得藏族青年男女的尊崇。吉祥天母还被称作“三界荣耀女王”，认为是众神之首，众佛之母，原西藏地方政府奉之为保护神。除以上重点介绍的几个节日外，藏族还有许多与佛教有关的节日。如月日，举行规模盛大的“赛宝会”，藏语叫“错曲蚌”。千余名僧人和官员手持自己的宝贝经过八角街来到布达拉宫前，举行各种表演，最后从小昭寺前返回大昭寺。月日，是“莎噶达挖”节。是日，人们聚集在布达拉宫前，有的泛舟于龙王潭水波之上，有的载歌载舞于水边绿地之间。据说，这个节日是为了纪念释迦牟尼诞辰及圆寂，也有预祝丰收的意思。月日，是朝山节，这天一早人们赶往各寺朝佛、转经。之后，到野外尽情歌舞、嬉戏、宴饮，只到黄昏才离去。月日，为藏族传统的神仙下凡节，藏语叫这个节日为“古巴拉波”。人们普遍认为这天神仙下凡到人间，能了解到每个人的所做所为。为了给神仙留下一个好印象，在这天人们更为踊跃地奔向寺庙，朝佛、转经、布施，同时还要尽可能多做善事，都希望在这年能吉祥如意。月日，仙女节，藏语叫“白来旦珍”。广大藏族妇女认为此节日与她们有关。这一天，要举行各种宗教活动。月日，为燃灯节，藏语称之为“噶登阿曲”。相传这天是宗喀巴的成道日，所以藏族人们在这一天都点起酥油灯，以示纪念。月日，是驱鬼节，藏语称为“古多”。每年这一天，布达拉宫举行一次盛大的跳神活动，各寺庙中也举行类似的活动。认为新的一年即将来到，得驱鬼消灾。
+                   </p>
+                </div>
+              </div>
+              <div class="nextPage">
+                 <ul>
+                   <li>1</li>
+                   <li>2</li>
+                   <li>3</li>
+                   <li>4</li>
+                   <li>5</li>
+                   <li>6</li>
+                 </ul>
+              </div>
+          </div><!-- 节日 -->
+       <div class="sixth">
+              <div class="dix">
+                 忌讳
+                 <img src="../images/no.gif" alt="">
+              </div>
+              <p class="taboo">
+                <span></span><b>1、</b>接待客人时，无论是行走还是言谈，总是让客人或长者为先，并使用敬语，如在名字后面加个："啦"字，以示尊敬和亲切，忌讳直呼其名。迎送客人，要躬腰曲膝，面带笑容。室内就坐，要盘腿端坐，不能双腿伸直，脚底朝人，不能东张西望。接受礼品，要双手去接。赠送礼品，要躬腰双手高举过头。敬茶，酒，烟时，要双手奉上，手指不能放进碗口。<br><span></span><b>2、</b>藏族最大的禁忌是杀生，受戒的佛教徒在这方面更是严格。虽吃牛羊肉，但他们不亲手宰杀。藏族人绝对禁吃驴，马肉和狗肉，有些地区也不吃鱼肉。<br><span></span><b>3、</b>吃饭时要食不满口
+                ，咬不出声，喝不出响。<br><span></span><b>4、</b>喝酥油茶时，主人倒茶，客人要待主人双手捧
+                到面前时，才能接过来喝。<br><span></span><b>5、</b>忌在别人后背吐唾沫，拍手掌。<br><span></span><b>6、</b>行路遇到寺院，玛尼堆，佛塔等宗教设施，必须从左往右绕行，信仰苯教的则从右边
+                绕行。 不得跨越法器，火盆。<br><span></span><b>7、</b>经筒，经轮不得逆转。<br><span></span><b>8、</b>忌讳别人用手触摸头顶。<br><span></span><b>9、</b>进寺庙时，忌讳吸烟、摸佛像、翻经书、敲钟鼓。对于喇嘛随身佩带的护身符、念珠等宗教器物，更不得动手抚摸；在寺庙内要肃静，就座时身子要端正，切忌坐活佛的座位；忌在寺院附近大声喧哗、打猎和随便杀生。<br><span></span><b>10、</b>忌用单手接递物品。主人倒茶时，客人须用双手把茶碗向前倾出，以表敬意。<br><span></span><b>11、</b>忌在拴牛、拴马和圈羊的地方大小便。<br><span></span><b>12、</b>忌用有藏文的
+                纸当手纸或擦东西。<br><span></span><b>13、</b>进入藏胞的帐房后，男的坐左边，女的坐右边，不
+                得混杂而坐。<br><span></span><b>14、</b>忌将骨头扔于火中。<br><span></span><b>15、</b>藏族家里病人或妇女生育时，门前都做了标记，有的在门外生一堆火，有的在门口插上树枝或贴一红布条。外人见到此标记，切勿进入。<br><span></span><b>16、</b>藏族一般不吃鱼吓、鸡肉和鸡蛋，不要勉
+                强劝食。但现在这类饮食习惯已有很大改变。<br><span></span><b>17、</b>每人均有凶日和吉日。凶日中，一切事情都不能做，只能在家里念经或出去朝佛。人们相信藏历的每一个地支终了、第二个地支开始时是一个凶年，如每个人的13岁、25岁、37岁、49岁（以此类推），都是凶年或"年关"，要特别小心，只有多念经、放布施才能避免灾难。
+              </p>
+          </div><!-- 忌讳 -->
+          <div class="seventh">
+             <div class="dix">
+                常用藏语
+                <img src="../images/hua.jpg" alt="">
+             </div>
+             <div class="language">
+                <p>吉祥如意   —————— （ 扎西德勒）</p>
+                <p>早晨好   ——————（ 休巴德勒）</p>
+                <p>下午好   —————— （求珠得勒）</p>
+                <p>晚上好   —————— （宫珠得勒 ） </p>
+                <p>谢谢   ——————（突及其 ）</p>
+                <p>再见   ——————（ 卡里沛）</p>
+                <p>你好吗   —————— （ 如索得波饮拜） </p>
+                <p>叫什么名字   ——————（ 名卡热 ） </p>
+                <p>对不起  —————— （广达）</p>
+                <p>这是什么  ——————（ 笛卡热 ）</p>
+                <p>多少钱  —————— （ 贝夏卡则热 ）</p>
+                <p>我买了  ——————（ 尼格因 ）</p>
+                <p>我不买  ——————（ 尼格没 ）</p>
+                <p>你  —————— （ 切让 ）</p>
+                <p>你们  ——————（切让措 ） </p>
+                <p>我  ——————（ 额啊 ）</p>
+                <p>我们  —————— （ 额让措 ）</p>
+                <p>他/她 —————— （ 阔让 ）</p>
+                <p>他们  —————— （ 阔让措 ）</p>
+                <p>父亲　——————（ 爸啦 ）</p>
+                <p>母亲  ——————（ 阿妈啦 ）</p>
+                <p>医生  ——————（闷八）</p>
+                <p>医院  ——————（门康） </p>
+                <p>汽车站  ——————（莫札帕左）</p>
+                <p>寺庙  ——————（贡吧）</p>
+                <p>邮局  ——————（益桑局）</p>
+                <p>旅馆  —————— （准康）</p>
+             </div>
+             <div class="girl">
+                <img src="../images/girl.jpg" alt="">
+             </div>
+          </div><!-- 常用语 -->
+       </div><!-- body-right-->
+    </div><!-- body-sma  -->  
+  </div><!-- body-big -->
+	<div id="footTop-big">
+		<div id="footTop-sma">
+			<span class="foot1">
+        <a href="http://www.12306.cn" target="_blank">12306</a>
+      </span>
+      <span class="foot2">
+        <a href="http://www.alitrip.com" target="_blank">阿里旅行</a>
+      </span>
+      <span class="foot3">
+        <a href="http://www.ctrip.com/" target="_blank">携程旅游</a>
+      </span>
+      <span class="foot4">
+        <a href="http://www.elong.com/" target="_blank">艺龙旅行</a>
+      </span>
+      <span class="foot5">
+        <a href="http://www.qunar.com/" target="_blank">去哪儿</a>
+      </span>
+		</div>
+	</div>
+	<div id="footBto-big">
+		<div id="footBto-sma">
+			<p><a href=""><span class="sp1">&copy;可可西里——进藏驴友的草料站</span></a></p>
+		</div>
+	</div>
+</div><!-- page -->
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/custom.js"></script>
+</head>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>美食集中营</title>
+	<link rel="stylesheet" type="text/css" href="../css/morefood.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+</head>
+<body>
+<!-- 登录 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-up" method="post">
+              <input type="text" placeholder="邮箱/手机/用户名" class="txt1" name="username">
+              <span id="dengerrName">尚未注册！</span>
+              <input type="password" placeholder="密码" class="txt2" name="password">
+              <span id="dengerrPass">密码错误！</span>
+              <input type="submit" value="登录" class="denglu">
+          </form>
+          <p><span class="forget">
+                <a href="#">忘记密码</a>
+              </span>
+              <span class="noname">
+                <a href="#" class="meizhanghao" data-toggle="modal" data-target="#myModal1" data-dismiss="modal">还没有账号？免费注册</a>
+              </span>
+          </p>
+          <div class="other">
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr1">
+            <span>其他登录方式</span>
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr2">
+          </div>
+          <div class="otherpicbox">
+            <div class="qq">
+              <img src="../images/qq1.gif" alt="" class="otherpic qq1">
+              <a href="#"><img src="../images/qq2.jpg" alt="" class="otherpic qq2"></a>
+            </div>
+            <div class="qzon">
+              <img src="../images/qzon1.gif" alt="" class="otherpic qzon1">
+              <a href="#"><img src="../images/qzon2.jpg" alt="" class="otherpic qzon2"></a>
+            </div>
+            <div class="sina">
+              <img src="../images/sina1.gif" alt="" class="otherpic sina1">
+              <a href="#"><img src="../images/sina2.jpg" alt="" class="otherpic sina2"></a>
+            </div>
+            <div class="weixin">
+              <img src="../images/weixin1.gif" alt="" class="otherpic weixin1">
+              <a href="#"><img src="../images/weixin2.jpg" alt="" class="otherpic weixin2"></a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框——注册 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- top -->
+        <h2 class="modal-title" id="myModalLabel1"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-in" method="post">
+              <input class="zhuTxt email" type="text" placeholder="请输入邮箱" name ='email'>
+              <span id="errEmail">格式错误！</span>
+              <span id="haveEmail">已被注册！</span>
+              <input class="zhuTxt userName" type="text" placeholder="用户名，4-16个字符，字母/中文/数字" name = "username">
+              <span id="false">格式错误！</span>
+              <span id="haveName">已被使用！</span>
+              <input class="zhuTxt setPass" type="text" placeholder="设置密码" name ='password'>
+              <input class="zhuTxt password" type="text" placeholder="输入密码">
+              <span id="butong">密码错误！</span>
+              <input class="zhuTxt invite" type="text" placeholder="输入邀请码，可不填">
+              <div class="tongyizhuce">
+                <div class="zhuce1">
+                  <span>注册视为同意  </span>《可可西里用户使用协议》
+                </div>
+                <div class="zhuce2">
+                  <a href="">
+                    <input type="submit" value="注册" class="gozhuce">
+                  </a>
+                </div>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page">
+	<div id="navBig">
+		<div id="navSma">
+      <div id="nav-top">
+        <h1>可可西里</h1>
+        <ul class="top-right">
+            <li class="btn top-rightli" data-toggle="modal" data-target="#myModal1" id="zhuce">
+                <a href="#">注册</a>
+            </li>
+            <li class="btn top-rightli" id="denglu" data-toggle="modal" data-target="#myModal">
+                <a href="#">登录</a>
+            </li>
+        </ul>
+      </div>
+      <div id="nav-bottom">
+		<ul class="nav-list">
+			<li class="nav-li" id="nav-li1"><a href="custom.html" target="_blank">风俗<span>文化</span></a></li>
+            <li class="nav-li" id="nav-li2"><a href="road.html" target="_blank">路线<span>查询</span></a></li>
+            <li class="nav-li" id="nav-li3"><a href="#" target="_blank">食宿<span>推荐</span></a></li>
+            <li class="nav-li" id="nav-li4"><a href="#" target="_blank">装备<span>大全</span></a></li>
+			<li class="nav-li" id="nav-li5"><a href="scenery.html" target="_blank">景区<span>介绍</span></a></li>
+            <li class="nav-li" id="nav-li6"><a href="#" target="_blank">搭顺<span>风车</span></a></li>
+            <li class="nav-li" id="nav-li8"><a href="#" target="_blank">自由<span>组团</span></a></li>
+            <li class="nav-li" id="nav-li9"><a href="#" target="_blank">进藏<span>须知</span></a></li>
+		</ul>
+      </div>
+		</div><!-- nav-sma -->
+	</div><!-- nav-big -->
+	<div id="bodyBig">
+		<ul class="flower">
+			<li><img src="../images/redflower.jpg" alt=""></li>
+			<li><img src="../images/redflower.jpg" alt=""></li>
+			<li><img src="../images/yeflower.jpg" alt=""></li>
+			<li><img src="../images/redflower.jpg" alt=""></li>
+			<li><img src="../images/redflower.jpg" alt=""></li>
+		</ul>
+		<div id="bodySma">
+			<div class="address">
+				<p><b>风俗文化&nbsp;&nbsp;&gt;&nbsp;&nbsp;美食&nbsp;&nbsp;&gt;&nbsp;&nbsp;更多</b></p>
+			</div>
+			<div class="title">
+				<img src="../images/lv.gif" alt="">
+				驴友草料大全
+			</div>
+			<div class="foodbox">
+				<div class="box box1">
+					<img src="../images/mnr.jpg" alt="" class="foodpic">
+					<h2><b>牦牛肉</b></h2>
+					<p>牦牛肉含蛋白较高，脂肪含量低，矿物质元素含量丰富，氨基酸结构比例更与人体相近。同时因为长年生活在无污染的高寒地带，其肉质天然、保健、细嫩，味道鲜美。既有牦牛肉干，也有卤牦牛肉，也有用新鲜牦牛肉做的各种菜肴。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box1 -->
+				<div class="box box2">
+					<img src="../images/nzbz.jpg" alt="" class="foodpic">
+					<h2><b>奶渣包子</b></h2>
+					<p>奶渣包子顾名思义就是用奶渣做馅，奶渣是什么呢？奶渣是提炼酥油剩下的物质，经烧制和水分蒸发后制成的奶渣。奶渣可以做成饼干、奶块等。新鲜的奶渣外表雪白，吃起来酸酸的，用来做包子馅，奶渣包子由此而来。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box2 -->
+				<div class="box box3">
+					<img src="../images/fish.jpg" alt="" class="foodpic">
+					<h2><b>巴河鱼</b></h2>
+					<p>巴河鱼是西藏林芝地非常有名的特色餐饮，藏族人民不吃鱼，因此巴河鱼的产量十分丰富。主要产自尼洋河和巴松错，属高山冷水鱼种，因为没有污染，所以巴河鱼的肉质十分细嫩鲜美味。而它的营养价值也极高，还有较高的药用价值，对改善肤质有特殊的效果。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box3 -->
+				<div class="box box4">
+					<img src="../images/zm.jpg" alt="" class="foodpic">
+					<h2><b>藏面</b></h2>
+					<p>臧面是藏族地区的特色早藏。主要原料是藏面，牛肉汤，配料是葱花，盐等。将事先做好晾干的藏面煮熟，放入滚烫的牛肉汤中，撒上葱花即可。鲜爽可口，美味无穷。营养丰富，老少皆宜，可补充体力，暖胃生热，促进消化。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box4 -->
+				<div class="box box5">
+					<img src="../images/jmz.jpg" alt="" class="foodpic">
+					<h2><b>火烧蕨麻猪</b></h2>
+					<p>火烧蕨麻猪是日喀则地区一道著名的美食，主要食材是当地特有的蕨麻猪。蕨麻猪因常在草原觅食蕨麻而得名,为甘南草原特产之一。火烧蕨麻猪特点是皮脆肉嫩,味道特别鲜美。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box5 -->
+				<div class="box box6">
+					<img src="../images/xnzg.jpg" alt="" class="foodpic">
+					<h2><b>细奶渣糕</b></h2>
+					<p>细奶渣糕是由细奶渣、红糖与酥油搅拌而成的。把牛奶打制分离出酥油以后，剩下奶水用火煮沸后冷却即成酸奶水，把它倒入竹制斗形滤水留在竹斗滤器中的就是奶渣。奶渣白色，味酸，具有极强的助消作用。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box6 -->
+				<div class="box box7">
+					<img src="../images/zs.jpg" alt="" class="foodpic">
+					<h2><b>人参果哲司</b></h2>
+					<p>哲司是由大米煮熟后和白糖同入溶化的酥油中翻炒而成。加入人参果者称为人参果哲司。人参果多种多样，有树上长的，枝上结的，藤上挂的，也有土里生的，有种植多年后才能开花结果，也有当年种植当年即可结果的。很多种类的人参果具有强身健体、防治疾病、益寿延年的功效</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box7 -->
+				<div class="box box8">
+					<img src="../images/pzmg.jpg" alt="" class="foodpic">
+					<h2><b>帕扎玛果</b></h2>
+					<p>帕扎玛果是由面粉和好，作成小疙瘩状，放水中煮熟，加入白糖、细奶渣，在酥油锅中翻炒而成的。这是一种甜面食，经过翻炒后，软脆兼备，奶味鲜浓，鲜甜而不腻，非常可口。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box8 -->
+				<div class="box box9">
+					<img src="../images/cf.jpg" alt="" class="foodpic">
+					<h2><b>藏族吹肺</b></h2>
+					<p>吹肺用新鲜猪肺从喉头吹气，边吹边用手拍打猪肺，使之扩张，再将适量的食盐、草果粉、辣椒面和蒜泥用温开水调成乳状，用汤匙从喉头灌入肺内，边灌、边抖、边吹气，边拍打，约需重复5-6次方能灌满。用麻线扎紧喉管，挂在火塘高处干燥，2到3月后即可食用。味香鲜，食而不腻，凉爽开胃，是极好的凉菜。随食随取，可保存约1年之久。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box9 -->
+				<div class="box box10">
+					<img src="../images/1.jpg" alt="" class="foodpic">
+					<h2><b>糍粑</b></h2>
+					<p>糌粑，藏语，即用青稞炒熟磨成的粉面。食用方便，不仅可以用茶水拌合食用，而且在不宜生火的情况下可以拌雪食服或冷水冲服。所以藏族同胞常称糌粑是“百食不厌”的食物。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box10 -->
+				<div class="box box11">
+					<img src="../images/2.jpg" alt="" class="foodpic">
+					<h2><b>糍粑肉粥</b></h2>
+					<p>糌粑除了可以做成糌粑团之外，也可以做成香浓的“糌粑肉粥”。如果你不喜欢糌粑团黏黏的感觉，那么香喷喷的美味糌粑粥就会更加适合你！现在拉萨许多藏餐厅都可以吃到这一美食。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box11 -->
+				<div class="box box12">
+					<img src="../images/3.jpg" alt="" class="foodpic">
+					<h2><b>烤藏香猪</b></h2>
+					<p>藏香猪又名“人参猪”,是西藏特有的一种瘦肉型猪，生长在海拔3000米至4000米的山间密林中，吃野外植物，是我国唯一的放牧型猪种。因其肉质营养丰富，被称为“高原之珍”。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box12 -->
+				<div class="box box13">
+					<img src="../images/4.jpg" alt="" class="foodpic">
+					<h2><b>朋必</b></h2>
+					<p>“朋必”其实是一种豌豆粉做成的小吃。在西藏，人们一提到“朋必”，就会想到日喀则，可以说“朋必”是日喀则小吃的象征。刚刚买来的“朋必”新鲜热乎，浇上鲜磨的辣椒汁，吃一口满嘴香气，回味无穷。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box13 -->
+				<div class="box box14">
+					<img src="../images/5.jpg" alt="" class="foodpic">
+					<h2><b>青稞酒</b></h2>
+					<p>青稞酒主要是藏族、土族等民族的民间传统酒精饮料，流行于西藏、青海、四川及云南等地藏族、土族聚居区。青稞酒，藏语叫做“羌”，是用西藏本地出产的一种主要粮食——青稞制成的。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box14 -->
+				<div class="box box15">
+					<img src="../images/6.jpg" alt="" class="foodpic">
+					<h2><b>土豆包子</b></h2>
+					<p>在西藏品尝一下地道的西藏土豆是必须的，因为高原日照时间长，昼夜温差大，所以土豆淀粉含量高，吃起来特别香甜。而土豆包子就是在土豆泥里面包着牛肉末，外面稍微炸了下，口感酥软，味道棒极了。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box15 -->
+				<div class="box box16">
+					<img src="../images/7.jpg" alt="" class="foodpic">
+					<h2><b>酸奶</b></h2>
+					<p>到了拉萨又怎能错过牦牛酸奶呢？拉萨的牦牛酸奶，看起来有点像豆腐花。不过吃起来比豆腐花刺激多了。牦牛酸奶的味道很原始，一个字：酸！但是加上蜂蜜，或者撒上白糖，舌尖上的感觉就会变得非常有趣。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box16 -->
+				<div class="box box17">
+					<img src="../images/8.jpg" alt="" class="foodpic">
+					<h2><b>松茸高汤</b></h2>
+					<p>松茸、灵芝、冬虫夏草、羊肚菌被称为“中国四大名菌”。西藏林芝是松茸的主要产地之一，去林芝没吃过松茸等于白来一趟。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box17 -->
+				<div class="box box18">
+					<img src="../images/9.jpg" alt="" class="foodpic">
+					<h2><b>酥油茶</b></h2>
+					<p>酥油茶是藏族同胞每日必备的饮品。是西藏高原生活的必需。寒冷的时候可以驱寒；吃肉的时候可以去腻；饥饿的时候可以充饥；困乏的时候可以解乏；瞌睡的时候，还可以清醒头脑。</p>
+					<div class="heart">
+						<img src="../images/baixin.jpg" alt="" class="baixin">
+						<img src="../images/hongxin.jpg" alt="" class="hongxin">
+						<span>收藏</span>
+					</div>					
+				</div><!-- box18 -->
+			</div><!-- foodbox -->
+			<ul class="slide">
+				<li class="slide-li1">
+					<span class="label label-info boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+						    80%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-success boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+						    60%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-warning boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+						    75%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-danger boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+						    70%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-default boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+						    85%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-primary boxpic"><br>美味指数
+					<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
+						    77%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-info boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 62%">
+						    62%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-success boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+						    60%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-warning boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+						    50%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-danger boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%">
+						    66%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-default boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+						    70%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-primary boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 97%">
+						    97%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-info boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 58%">
+						    58%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-success boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+						    80%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-warning boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 58%">
+						    58%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-danger boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 82%">
+						    82%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-default boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+						    95%
+						  </div>
+						</div>
+					</span>
+				</li>
+				<li>
+					<span class="label label-primary boxpic"><br>美味指数
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+						    80%
+						  </div>
+						</div>
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div><!-- bodyBig -->
+	<div id="footTop-big">
+		<div id="footTop-sma">
+			<img src="../images/Totop.jpg" alt="">
+			<span class="foot1">
+				<a href="http://www.12306.cn">12306</a>
+			</span>
+			<span class="foot2">
+				<a href="http://www.alitrip.com">阿里旅行</a>
+			</span>
+			<span class="foot3">
+				<a href="http://www.ctrip.com/">携程旅游</a>
+			</span>
+			<span class="foot4">
+				<a href="http://www.elong.com/">艺龙旅行</a>
+			</span>
+			<span class="foot5">
+				<a href="http://www.qunar.com/">去哪儿</a>
+			</span>
+		</div>
+	</div>
+	<div id="footBto-big">
+		<div id="footBto-sma">
+			<p><a href=""><span class="sp1">&copy;可可西里——进藏驴友的草料站</span></a></p>
+		</div>
+	</div>	
+</div><!-- page -->
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/morefood.js"></script>
+</body>
+</html>
