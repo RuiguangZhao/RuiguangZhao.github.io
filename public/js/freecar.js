@@ -132,3 +132,8 @@ $(".password").blur(function(){
       $("#butong").css("display","none")
     }
 })
+
+// 填写表格
+$(".bt-right").click(function(){
+    $(".body-disc form").stop().slideToggle(500) 
+})
