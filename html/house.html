@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>食宿推荐</title>
+	<link rel="stylesheet" type="text/css" href="../css/house.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+</head>
+<body>
+<!-- 登录 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-up" method="post">
+              <input type="text" placeholder="邮箱/手机/用户名" class="txt1" name="username">
+              <span id="dengerrName">尚未注册！</span>
+              <input type="password" placeholder="密码" class="txt2" name="password">
+              <span id="dengerrPass">密码错误！</span>
+              <input type="submit" value="登录" class="denglu">
+          </form>
+          <p><span class="forget">
+                <a href="#">忘记密码</a>
+              </span>
+              <span class="noname">
+                <a href="#" class="meizhanghao" data-toggle="modal" data-target="#myModal1" data-dismiss="modal">还没有账号？免费注册</a>
+              </span>
+          </p>
+          <div class="other">
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr1">
+            <span>其他登录方式</span>
+            <hr style="height:1px;width:132px;border:none;border-top:1px solid #50bbdb;" class="hr2">
+          </div>
+          <div class="otherpicbox">
+            <div class="qq">
+              <img src="../images/qq1.gif" alt="" class="otherpic qq1">
+              <a href="#"><img src="../images/qq2.jpg" alt="" class="otherpic qq2"></a>
+            </div>
+            <div class="qzon">
+              <img src="../images/qzon1.gif" alt="" class="otherpic qzon1">
+              <a href="#"><img src="../images/qzon2.jpg" alt="" class="otherpic qzon2"></a>
+            </div>
+            <div class="sina">
+              <img src="../images/sina1.gif" alt="" class="otherpic sina1">
+              <a href="#"><img src="../images/sina2.jpg" alt="" class="otherpic sina2"></a>
+            </div>
+            <div class="weixin">
+              <img src="../images/weixin1.gif" alt="" class="otherpic weixin1">
+              <a href="#"><img src="../images/weixin2.jpg" alt="" class="otherpic weixin2"></a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框——注册 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="clear1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- top -->
+        <h2 class="modal-title" id="myModalLabel1"><img src="../images/sign-up.gif" alt=""></h2>
+      </div>
+      <div class="modal-body">
+          <form action="/sign-in" method="post">
+              <input class="zhuTxt email" type="text" placeholder="请输入邮箱" name ='email'>
+              <span id="errEmail">格式错误！</span>
+              <span id="haveEmail">已被注册！</span>
+              <input class="zhuTxt userName" type="text" placeholder="用户名，4-16个字符，字母/中文/数字" name = "username">
+              <span id="false">格式错误！</span>
+              <span id="haveName">已被使用！</span>
+              <input class="zhuTxt setPass" type="text" placeholder="设置密码" name ='password'>
+              <input class="zhuTxt password" type="text" placeholder="输入密码">
+              <span id="butong">密码错误！</span>
+              <input class="zhuTxt invite" type="text" placeholder="输入邀请码，可不填">
+              <div class="tongyizhuce">
+                <div class="zhuce1">
+                  <span>注册视为同意  </span>《可可西里用户使用协议》
+                </div>
+                <div class="zhuce2">
+                  <a href="">
+                    <input type="submit" value="注册" class="gozhuce">
+                  </a>
+                </div>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="page">
+	<div id="navBig">
+		<div id="navSma">
+		      <div id="nav-top">
+		        <h1><b>可可西里</b></h1>
+		        <ul class="top-right">
+		            <li class="btn top-rightli" data-toggle="modal" data-target="#myModal1" id="zhuce">
+		                <a href="#">注册</a>
+		            </li>
+		            <li class="btn top-rightli" id="denglu" data-toggle="modal" data-target="#myModal">
+		                <a href="#">登录</a>
+		            </li>
+		        </ul>
+		      </div>
+		      <div id="nav-bottom">
+					<ul class="nav-list">
+						  <li class="nav-li" id="nav-li1"><a href="custom.html" target="_blank">风俗<span>文化</span></a></li>
+        			<li class="nav-li" id="nav-li2"><a href="road.html" target="_blank">路线<span>查询</span></a></li>
+        			<li class="nav-li" id="nav-li3"><a href="#" target="_blank">食宿<span>推荐</span></a></li>
+        			<li class="nav-li" id="nav-li4"><a href="equip.html" target="_blank">装备<span>大全</span></a></li>
+						  <li class="nav-li" id="nav-li5"><a href="scenery.html" target="_blank">景区<span>介绍</span></a></li>
+        			<li class="nav-li" id="nav-li6"><a href="freecar.html" target="_blank">搭顺<span>风车</span></a></li>
+        			<li class="nav-li" id="nav-li7"><a href="group" target="_blank">自由<span>组团</span></a></li>
+        			<li class="nav-li" id="nav-li8"><a href="mast.html" target="_blank">进藏<span>须知</span></a></li>
+					</ul>
+		      </div>
+		</div><!-- nav-sma -->
+	</div><!-- nav-big -->
+  <div id="check-big">
+      <div id="check-sma">
+        <ul>
+          <li class="tuhao"><a href="#jiudian">土豪酒店</a></li>
+          <li><a href="#kezhan">平民客栈</a></li>
+          <li><a href="#qinglv">穷游青旅</a></li>
+
+        </ul>
+      </div><!-- check-sma -->
+  </div><!-- check-big -->
+  <div class="title-big">
+      <div class="title-sma">
+        <span class="hr"></span>
+        <a href="" name="jiudian">< 土豪酒店 ></a>
+        <span class="hr"></span>
+      </div><!-- title-sma -->
+  </div><!-- title-big -->
+  <div class="house-big">
+     <div class="house-sma">
+         <div class="housebox housebox1">
+            <img src="../images/house1.jpg" alt="" class="housepic">
+            <h3>拉萨慈渡酒店
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">八廊街(八角街)/大昭寺即附近地区</p>
+            <div class="pingjia">
+              <p><span>4.6</span>/5分<span class="tuijian">96%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>398</span>起 <a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox2">
+            <img src="../images/house2.jpg" alt="" class="housepic">
+            <h3>拉萨瑞吉度假酒店
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">八廓街(八角街）/大昭寺及附近地区近西藏大学</p>
+            <div class="pingjia">
+              <p><span>4.6</span>/5分<span class="tuijian">96%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>951</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox3">
+            <img src="../images/house3.jpg" alt="" class="housepic">
+            <h3>西藏迎宾馆
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">布达拉宫及附近地区近北京中路</p>
+            <div class="pingjia">
+              <p><span>4.4</span>/5分<span class="tuijian">92%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>540</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox1">
+            <img src="../images/house4.jpg" alt="" class="housepic">
+            <h3>拉萨香格里拉大酒店
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">罗布林卡及附近地区近布达拉宫</p>
+            <div class="pingjia">
+              <p><span>4.6</span>/5分<span class="tuijian">96%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>1044</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox2">
+            <img src="../images/house5.jpg" alt="" class="housepic">
+            <h3>圣地天堂洲际大饭店 
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">近拉萨市政府、西藏大学</p>
+            <div class="pingjia">
+              <p><span>4.4</span>/5分<span class="tuijian">92%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>1073</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox3">
+            <img src="../images/house6.jpg" alt="" class="housepic">
+            <h3>拉萨雅汀舍丽花园酒店 
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">金珠西路及附近地区近八一路时代广场</p>
+            <div class="pingjia">
+              <p><span>4.4</span>/5分<span class="tuijian">97%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>1899</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+     </div><!-- house-sma -->
+  </div><!-- house-big -->
+  <div class="title-big">
+      <div class="title-sma">
+        <span class="hr"></span>
+        <a href="" name="kezhan">< 平民客栈 ></a>
+        <span class="hr"></span>
+      </div><!-- title-sma -->
+  </div><!-- title-big -->
+  <div class="house-big">
+      <div class="house-sma">
+          <div class="housebox housebox1">
+            <img src="../images/house7.jpg" alt="" class="housepic">
+            <h3>拉萨腔调藏式精品客栈  
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">八廓街(八角街)/大昭寺及附近地区近江苏路</p>
+            <div class="pingjia">
+              <p><span>4.5</span>/5分<span class="tuijian">95%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>188</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox2">
+            <img src="../images/house8.jpg" alt="" class="housepic">
+            <h3>拉萨牧马人精品花园客舍   
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">团结新村及附近地区近西藏藏医医院</p>
+            <div class="pingjia">
+              <p><span>4.3</span>/5分<span class="tuijian">91%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>128</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox3">
+            <img src="../images/house9.jpg" alt="" class="housepic">
+            <h3>拉萨雅鲁藏布大酒店 
+              <span> 
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">市政府及附近地区</p>
+            <div class="pingjia">
+              <p><span>4.3</span>/5分<span class="tuijian">96%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>198</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+         <div class="housebox housebox1">
+            <img src="../images/house10.jpg" alt="" class="housepic">
+            <h3>拉萨若·初见青年酒店 
+              <span> 
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">团结新村及附近地区近色拉南路</p>
+            <div class="pingjia">
+              <p><span>4.6</span>/5分<span class="tuijian">94%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>128</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+          <div class="housebox housebox2">
+            <img src="../images/house11.jpg" alt="" class="housepic">
+            <h3>拉萨帝人酒店
+              <span> 
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">布达拉宫及附近地区近布达拉宫</p>
+            <div class="pingjia">
+              <p><span>4.2</span>/5分<span class="tuijian">94%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>137</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+          <div class="housebox housebox3">
+            <img src="../images/house12.jpg" alt="" class="housepic">
+            <h3>德林酒店(布达拉宫店)
+              <span> 
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">布达拉宫及附近地区</p>
+            <div class="pingjia">
+              <p><span>4.0</span>/5分<span class="tuijian">92%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>146</span>起<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+         </div>
+      </div><!-- house-sma -->
+  </div><!-- house-big -->
+   <div class="title-big">
+      <div class="title-sma">
+        <span class="hr"></span>
+        <a href="" name="qinglv">< 穷游青旅 ></a>
+        <span class="hr"></span>
+      </div><!-- title-sma -->
+  </div><!-- title-big -->
+  <div class="house-big">
+      <div class="house-sma">
+          <div class="housebox housebox1">
+            <img src="../images/house13.jpg" alt="" class="housepic">
+            <h3>拉萨3650客栈   
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">扎基寺及附近地区近扎基寺</p>
+            <div class="pingjia">
+              <p><span>4.9</span>/5分<span class="tuijian">97%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>12</span>起/床位<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+          </div>
+          <div class="housebox housebox2">
+            <img src="../images/house14.jpg" alt="" class="housepic">
+            <h3>拉萨尘埃落定青年旅社  
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">八廓街(八角街)/大昭寺及附近地区</p>
+            <div class="pingjia">
+              <p><span>4.1</span>/5分<span class="tuijian">88%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>18</span>起/床位<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+          </div>
+          <div class="housebox housebox3">
+            <img src="../images/house15.jpg" alt="" class="housepic">
+            <h3>拉萨米季客栈 
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">金珠东路/太阳岛地区近阳岛路</p>
+            <div class="pingjia">
+              <p><span>4.8</span>/5分<span class="tuijian">93%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>14</span>起/床位<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+          </div>
+          <div class="housebox housebox1">
+            <img src="../images/house16.jpg" alt="" class="housepic">
+            <h3>拉萨老男孩客栈 
+              <span>
+                <img src="../images/xing.gif" alt="">
+                <img src="../images/xing.gif" alt="">
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">八廓街(八角街)/大昭寺及附近地区近小昭寺</p>
+            <div class="pingjia">
+              <p><span>4.5</span>/5分<span class="tuijian">96%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>18</span>起/床位<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+          </div>
+          <div class="housebox housebox2">
+            <img src="../images/house17.jpg" alt="" class="housepic">
+            <h3>拉萨翼屿慢生活格调客栈 
+              <span>
+                  新店
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">扎基寺及附近地区近齐拉路</p>
+            <div class="pingjia">
+              <p><span>4.3</span>/5分<span class="tuijian">100%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>18</span>起/床位<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+          </div>
+          <div class="housebox housebox3">
+            <img src="../images/house18.jpg" alt="" class="housepic">
+            <h3>拉萨瑾宁居客栈 
+              <span>
+                  新店
+              </span>
+            </h3>
+            <p class="address"><img src="../images/dingwei.gif" alt="">市政府及附近地区近红旗西路</p>
+            <div class="pingjia">
+              <p><span>4.8</span>/5分<span class="tuijian">100%<span>驴友推荐</span></span></p>
+            </div>
+            <p class="price">网络订价：￥<span>19</span>起/床位<a href="http://www.ctrip.com">携程</a><a href="http://www.elong.com">艺龙</a><a href="http://www.alitrip.com">阿里</a></p>
+          </div>
+      </div><!-- house-sma -->
+  </div><!-- house-big -->
+  <div id="footTop-big">
+    <div id="footTop-sma">
+      <img src="../images/Totop.jpg" alt="">
+      <span class="foot1">
+        <a href="http://www.12306.cn">12306</a>
+      </span>
+      <span class="foot2">
+        <a href="http://www.alitrip.com">阿里旅行</a>
+      </span>
+      <span class="foot3">
+        <a href="http://www.ctrip.com/">携程旅游</a>
+      </span>
+      <span class="foot4">
+        <a href="http://www.elong.com/">艺龙旅行</a>
+      </span>
+      <span class="foot5">
+        <a href="http://www.qunar.com/">去哪儿</a>
+      </span>
+    </div>
+  </div>
+  <div id="footBto-big">
+    <div id="footBto-sma">
+      <p><a href=""><span class="sp1">&copy;可可西里——进藏驴友的草料站</span></a></p>
+    </div>
+  </div>  
+</div><!-- page -->
+	<script src="../js/jquery-1.11.1.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/house.js"></script>
+</body>
+</html>

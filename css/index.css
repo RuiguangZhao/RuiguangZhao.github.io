@@ -1,0 +1,234 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	font-size: 36px;
+	color: #fff;
+	line-height: 130px;
+}
+body{
+	background-image: url(../images/indexbg.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: 0 -100px;			
+}
+.swiper-container{
+	width: 1130px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+.anih1{
+	font-size: 100px;
+	line-height: 120px;
+	text-align: center;
+	font-family:  "汉仪颜楷繁";
+}
+.anip{
+	font-size: 30px;
+	line-height: 50px;
+	text-align: center;
+	font-family: "汉仪雪君体简";
+}
+.container { 
+	width: 180px;
+	height: 130px;
+	float: left;
+	margin-left: 70px;
+	margin-top: 20px;
+	position: relative;
+	perspective: 800px;          /*目前浏览器都不支持 perspective 属性。
+                                    Chrome 和 Safari 支持替代的 -webkit-perspective 属性*/
+	-webkit-perspective :800px;   /*perspective规定3D视距，值越小，离观察者越近*/
+}	
+.container1	{
+	margin-left: 220px;
+}	
+.container5	{
+	margin-left: 220px;
+}							/*perspective 属性定义 3D 元素距视图的距离，以像素计*/
+#card1 {								/*当为元素定义 perspective 属性时，其子元素会获得透视*/
+	width: 100%;					/*效果，而不是元素本身。*/
+	height: 100%;					
+	position: absolute;
+	transform-style: preserve-3d; /* transform-style属性需要设置在父元素中，并且高于任*/
+	transition: transform 1s;     /*何嵌套的变形元素*/
+} 
+#card1 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;/*backface-visibility 属性定义当元素不面向屏幕时是否可见*/
+}  
+#card1 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card1 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+}                                 
+#card2 {								
+    width: 100%;				
+    height: 100%;					
+    position: absolute;
+    transform-style: preserve-3d; 
+	transition: transform 1s;     
+} 
+#card2 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}  
+#card2 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card2 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+}
+#card3 {								
+    width: 100%;				
+    height: 100%;					
+    position: absolute;
+    transform-style: preserve-3d; 
+	transition: transform 1s;     
+} 
+#card3 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}  
+#card3 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card3 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+} 
+#card4 {								
+    width: 100%;				
+    height: 100%;					
+    position: absolute;
+    transform-style: preserve-3d; 
+	transition: transform 1s;     
+} 
+#card4 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}  
+#card4 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card4 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+}   
+#card5 {								
+    width: 100%;				
+    height: 100%;					
+    position: absolute;
+    transform-style: preserve-3d; 
+	transition: transform 1s;     
+} 
+#card5 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}  
+#card5 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card5 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+}    
+#card6 {								
+    width: 100%;				
+    height: 100%;					
+    position: absolute;
+    transform-style: preserve-3d; 
+	transition: transform 1s;     
+} 
+#card6 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}  
+#card6 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card6 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+}   
+#card7 {								
+    width: 100%;				
+    height: 100%;					
+    position: absolute;
+    transform-style: preserve-3d; 
+	transition: transform 1s;     
+} 
+#card7 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}  
+#card7 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card7 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+}                           
+#card8 {								
+    width: 100%;				
+    height: 100%;					
+    position: absolute;
+    transform-style: preserve-3d; 
+	transition: transform 1s;     
+} 
+#card8 span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}  
+#card8 .front img{
+  	width: 180px;
+  	height: 130px;
+}
+#card8 .back {
+    background-color: rgba(0,0,0,0.6);
+    transform: rotateY( 130deg );
+    text-align: center;
+}     

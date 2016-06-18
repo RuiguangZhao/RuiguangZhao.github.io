@@ -1,0 +1,521 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+a:hover{
+  text-decoration: none;
+}
+li{
+	list-style: none;
+	float: left;
+}
+#myModalLabel img{
+  display: block;
+  margin: 0 auto;
+}
+.modal-body{
+  padding: 0px;
+  border: none;
+}
+.modal-body input{
+  width: 354px;
+  height: 54px;
+  margin: 0px auto;
+  margin-left: 120px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+.modal-body .txt2{
+  margin-top: 18px;
+}
+.modal-body .denglu{
+  margin-top: 18px;
+  background-color: #50bbdb;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 54px;
+  color: #fff;
+}
+.modal-body .forget{
+  display: inline-block;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+.modal-body .noname{
+  display: inline-block;
+  width: 200px;
+  margin-left: 0px;
+}
+.modal-body a{
+  font-size: 14px;
+  color: #50bbdb;
+}
+.modal-body .noname .meizhanghao{
+  margin: 0 0 0 140px;
+  padding: 0;
+  display: inline-block;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #50bbdb;
+  border: none;
+}
+.modal-body .other{
+  height: 40px;
+  width: 360px;
+  margin-left: 120px;
+  line-height: 40px;
+  text-align: center;
+}
+.modal-body .other span,hr{
+  display: inline-block;
+  float: left;
+}
+.modal-body .other span{
+  color: #b4b4b4;
+}
+.modal-body .otherpic{
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 5px; 
+}
+.otherpicbox{
+  width: 354px;
+  height: 70px;
+  margin: 0 0 0 120px;
+}
+.qq{
+  width: 44px;
+  height: 44px;
+  margin-top: 10px;
+  margin-left: 30px;
+  float: left;
+}
+.qzon{
+  width: 44px;
+  height: 44px;
+  margin-top: 10px;
+  margin-left: 45px;
+  float: left;
+}
+.sina{
+  width: 44px;
+  height: 44px;
+  margin-top: 10px;
+  margin-left: 45px;
+  float: left;
+}
+.weixin{
+  width: 44px;
+  height: 44px;
+  margin-top: 10px;
+  margin-left: 30px;
+  float: left;
+}
+.qq .qq2{
+  display: none;
+}
+.sina .sina2{
+  display: none;
+}
+.qzon .qzon2{
+  display: none;
+}
+.weixin .weixin2{
+  display: none;
+}
+#myModal1 img{
+    display: block;
+    margin: 0 auto;
+} 
+#myModal1 .telZhuce a{
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #50bbdb;
+    border: none;
+    display: block;
+    margin-left: 70%;
+}
+#myModal1 .modal-body{
+    padding-top: 0;
+}
+#myModal1 .zhuTxt{
+    margin-bottom: 12px;
+}
+#myModal1 .tongyizhuce{
+    width: 352px;
+    height: 38px;
+    margin-left: 118px;
+    margin-bottom: 10px;
+}
+#myModal1 .zhuce1{
+    width: 220px;
+    height: 28px;
+    float: left;
+    font-size: 12px;
+    padding-top: 10px;
+}
+#myModal1 .zhuce1 span{
+    color: #b4b4b4;
+}
+#myModal1 .zhuce2{
+    width: 120px;
+    height: 38px;
+    float: right;
+}
+#myModal1 .gozhuce{
+    margin: 0;
+    padding: 0;
+    width: 120px;
+    height: 38px;
+    background-color:#50bbdb;
+    border: none;
+    border-radius: 3px;
+    margin-left: 4px; 
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+}
+#myModal1 input{
+  height: 45px;
+}
+#clear{
+  border: none;
+}
+#clear1{
+  border: none;
+}
+/*登录用户名验证*/
+#dengerrName{
+    display: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    color: red;
+}
+/*登录注册验证*/
+#dengerrPass{
+    display: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    color: red;
+}
+/*注册页面邮箱验证*/
+#errEmail{
+    display: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    color: red;
+}
+#haveEmail{
+    display: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    color: red;
+}
+/*注册页用户名验证*/
+#false{
+    display: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    color: red;
+}
+#haveName{
+    display: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    color: red;
+}
+/*注册密码验证*/
+#butong{
+    display: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    color: red;
+}
+#page{
+	width: 100%;
+}
+#navBig{
+	width: 100%;
+	height: 236px;
+  background-image: url(../images/nav-bg4.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+#navSma{
+	width: 1040px;
+	height: 236px;
+	margin: 0 auto;
+  overflow: hidden;
+}
+#nav-top{
+  height: 75px;
+}
+#nav-top h1{
+  margin-top: 10px;
+  font-size: 40px;
+  display:block;
+  float: left;
+  font-family: "汉仪雪峰体简";
+  color: #0E0D0D;
+}
+#zhuce{
+  padding: 0;
+  display:block;
+  float: right;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  margin-top:10px;
+}
+#zhuce a{
+  color: #69E778;
+}
+#zhuce a:hover{
+  color: #fff;
+}
+#shuxian{
+  margin-top:14px;
+  margin-left: 10px;
+}
+#denglu{
+  padding: 0;
+  margin-right: 10px;
+  font-size: 16px;
+  display:block;
+  float: right;
+  font-family: "微软雅黑";
+  margin-top:10px;
+}
+#denglu a{
+  color: #69E778;
+}
+#denglu a:hover{
+ color: #fff;
+}
+#page{
+  width: 100%;
+}
+#navBig{
+  width: 100%;
+  height: 236px;
+  background-image: url(../images/nav-bg2.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+#navSma{
+  width: 1040px;
+  height: 236px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#nav-top{
+  height: 75px;
+}
+#nav-top h1{
+  margin-top: 10px;
+  font-size: 40px;
+  display:block;
+  float: left;
+  font-family: "汉仪雪峰体简";
+  color: #0E0D0D;
+}
+#zhuce{
+  padding: 0;
+  display:block;
+  float: right;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  margin-top:10px;
+}
+#zhuce a{
+  color: #69E778;
+}
+#zhuce a:hover{
+  color: #fff;
+}
+#shuxian{
+  margin-top:14px;
+  margin-left: 10px;
+}
+#denglu{
+  padding: 0;
+  margin-right: 10px;
+  font-size: 16px;
+  display:block;
+  float: right;
+  font-family: "微软雅黑";
+  margin-top:10px;
+}
+#denglu a{
+  color: #69E778;
+}
+#denglu a:hover{
+ color: #fff;
+}
+.nav-list{
+  float: left;
+}
+.nav-li{
+  float: left;
+  width: 58px;
+  border-radius: 8px;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 30px;
+  background-color: rgba(0,0,0,0.5);
+}
+.nav-li:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+.nav-li span{
+  display: block;
+}
+.nav-li a{
+  color: #fff;
+  font-size: 20px;
+}
+.nav-li a:hover{
+  color: #03DE03;
+  text-decoration: none;
+}
+#nav-li1{
+  margin-left: 150px;
+  background-color: rgba(0,0,0,0.3);
+}
+#nav-li4 a{
+   color:#03DE03;
+}
+#body-big{
+  width: 100%;
+  overflow: hidden;
+   background: -webkit-linear-gradient(left top,#f8fad0,#C9A41B,#f8fad0);
+  background: -o-linear-gradient(left top,#f8fad0,#C9A41B,#f8fad0);
+  background: -moz-linear-gradient(left top,#f8fad0,#C9A41B,#f8fad0);
+  background: linear-gradient(left top,#f8fad0,#C9A41B,#f8fad0);
+  padding-bottom: 40px;
+}
+#body-sma{
+  width: 1000px;
+  margin: 0 auto;
+}
+#body-sma h1{
+  font-size: 40px;
+  text-align: center;
+  line-height: 100px;
+  font-family: "汉仪雪君体简";
+}
+.box{
+  width: 100%;
+  height: 216px;
+  background-color: #FAF8F8;
+  margin-top: 30px;
+  box-shadow: 6px 6px 8px #E1DDDD;
+
+}
+.box1{
+  margin-top: 0;
+}
+.box-out{
+  width: 300px;
+  height: 216px;
+  -webkit-background-size: 300px 216px;
+  background-size: 300px 216px;
+  float: left;
+}
+.box-in{
+  width: 120px;
+  height: 216px;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 40px;
+  line-height: 216px;
+  text-align: center;
+}
+.box1-out{
+   background-image: url(../images/onfoot.jpg);
+}
+.box2-out{
+   background-image: url(../images/car.jpg);
+}
+.box3-out{
+   background-image: url(../images/bicycle.jpg);
+}
+.equip{
+  width: 700px;
+  height: 216px;
+  float: right;
+  padding: 10px;
+}
+.equip ul li{
+  line-height: 28px;
+}
+
+#footTop-big{
+  width: 100%;
+  height: 50px;
+  background-color: #444b55;
+}
+#footTop-sma{
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+}
+#footTop-sma span{
+  display: inline-block;
+}
+#footTop-sma span a{
+  line-height: 50px;
+  color: #cdcfd2;
+  margin-left: 115px;
+}
+#footBto-big{
+  width: 100%;
+  height: 40px;
+  background-color: #565d65;
+}
+#footBto-sma{
+  width: 1000px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+#footBto-sma p a span{
+  line-height: 40px;
+  display: inline-block;
+  color:#cdcfd2;
+  margin-left: 25px; 
+}
